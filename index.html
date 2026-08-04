@@ -36,7 +36,9 @@
   Added media sections: film triptych rail after credentials (three 9:16 films with still
   fallbacks), macro image headers on the three formulation plates, an editorial results split
   (mature portrait), a sticky consult figure beside the appointment plates, a full-bleed lake
-  film band before pricing, and a gallery rail of styled stills before the FAQ. Films play only
+  film band before pricing. (Gallery rail before the FAQ removed 2026-08-03 per operator; its
+  stills remain in cedar-creek-assets/. Veo bakes 4px black bars into every clip's long edges;
+  all five v2 films are re-mastered from originals with the bars cropped.) Films play only
   while on screen; reduced motion keeps the stills. All film mp4s live in cedar-creek-films/
   (gitignored), stills in cedar-creek-assets/. Realism bar: honest skin texture, filmic warm
   light, restrained single-motion clips, champagne gold carried in the light. AI media honesty:
@@ -391,8 +393,8 @@
     .foot-col address{font-style:normal;color:var(--ink-2);font-size:.93rem;line-height:1.85}
     .foot-col p{color:var(--ink-2);font-size:.93rem;line-height:1.85}
     .foot-col address,.foot-col p,.foot-col li{font-family:var(--disp);font-size:.95rem;letter-spacing:.01em}
-    .foot-bottom{border-top:1px solid var(--hair);padding-top:1.6rem;display:grid;gap:.7rem}
-    .foot-bottom p{font-size:.79rem;color:var(--faint);line-height:1.62;max-width:110ch}
+    .foot-bottom{border-top:1px solid var(--hair);padding-top:1.6rem;display:grid;gap:.7rem;text-align:center}
+    .foot-bottom p{font-size:.79rem;color:var(--faint);line-height:1.62;max-width:110ch;margin-inline:auto}
     @media (min-width:820px){.foot-grid{grid-template-columns:2fr 1fr 1fr 1fr}}
 
     /* ---------- v2: graded film slots (match the page photo grade) ---------- */
@@ -444,13 +446,6 @@
     .lake-card{margin-top:2rem;display:inline-grid;gap:.3rem;border:1px solid var(--hair);background:rgba(14,21,18,.58);backdrop-filter:blur(7px);padding:1.15rem 1.35rem;font-size:.92rem;color:var(--ink-2);line-height:1.6}
     .lake-card b{font-family:var(--disp);font-weight:500;color:var(--ink);font-size:1.02rem;letter-spacing:.02em}
 
-    /* ---------- v2: gallery rail ---------- */
-    .grail{display:flex;gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1.1rem;scrollbar-color:var(--vio) var(--panel)}
-    .grail figure{margin:0;flex:none;scroll-snap-align:start}
-    .grail .media{height:clamp(340px,44vw,520px);border:1px solid var(--hair)}
-    .grail .media>img{width:auto;height:100%}
-    .grail figcaption{margin-top:.8rem;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);font-weight:700}
-
     @media (prefers-reduced-motion:reduce){
       *,*::before,*::after{animation:none!important;transition:none!important}
       html.js .reveal:not(.in){transform:none}
@@ -477,10 +472,9 @@
   13. Lake film band: film slot + still fallback + copy + address card
   14. Pricing: 3-column comparison table + price note
   15. The practice: portrait + caption + 4 principle rows (keep the honesty framing)
-  16. Field notes gallery: 5 still figures + captions + honesty note
-  17. FAQ: 6 question and answer pairs
-  18. CTA: drop film slot (video src), heading, intro, price line, consultation form, success message
-  19. Footer: blurb, address, contact, hours, legal links, medical disclaimer, trademark note
+  16. FAQ: 6 question and answer pairs
+  17. CTA: drop film slot (video src), heading, intro, price line, consultation form, success message
+  18. Footer: blurb, address, contact, hours, legal links, medical disclaimer, trademark note (centered)
 ============================================================ -->
   <a class="skip" href="#main">Skip to main content</a>
 
@@ -954,40 +948,6 @@
       </div>
     </section>
 
-    <!-- ============ v2: FIELD NOTES (gallery rail) ============ -->
-    <section class="sec wrap" id="notes">
-      <div class="sec-head">
-        <!-- SWAP: gallery kicker + heading -->
-        <p class="kicker reveal">Field notes</p>
-        <h2 class="reveal" style="--d:.06s">In the studio's light.</h2>
-      </div>
-      <!-- SWAP: gallery figures -->
-      <div class="grail reveal" role="list" tabindex="0" aria-label="A rail of styled studio study photographs">
-        <figure role="listitem">
-          <div class="media"><img src="cedar-creek-assets/gold-profile.jpg" width="893" height="1600" alt="A profile lit by a single champagne gold rim light against deep green" loading="lazy" decoding="async"></div>
-          <figcaption>Champagne hour</figcaption>
-        </figure>
-        <figure role="listitem">
-          <div class="media"><img src="cedar-creek-assets/fresh-portrait.jpg" width="1289" height="1600" alt="A woman in her thirties with minimal makeup in soft daylight" loading="lazy" decoding="async"></div>
-          <figcaption>Fresh, not frozen</figcaption>
-        </figure>
-        <figure role="listitem">
-          <div class="media"><img src="cedar-creek-assets/lip-detail.jpg" width="1289" height="1600" alt="A gloved fingertip near natural lips in warm side light" loading="lazy" decoding="async"></div>
-          <figcaption>The lip, unhurried</figcaption>
-        </figure>
-        <figure role="listitem">
-          <div class="media"><img src="cedar-creek-assets/treatment-room.jpg" width="1289" height="1600" alt="A calm treatment room with a cream chair, brass lamp and cedar green wall" loading="lazy" decoding="async"></div>
-          <figcaption>Morning light</figcaption>
-        </figure>
-        <figure role="listitem">
-          <div class="media"><img src="cedar-creek-assets/reception-lounge.jpg" width="1289" height="1600" alt="A small lounge with boucle chairs and a cedar slat wall" loading="lazy" decoding="async"></div>
-          <figcaption>The lounge</figcaption>
-        </figure>
-      </div>
-      <!-- SWAP: gallery honesty note -->
-      <p class="medianote reveal">Styled studies in the studio's palette, set dressing rather than floor plans. Come see the real thing, the coffee is on.</p>
-    </section>
-
     <!-- ============ FAQ ============ -->
     <section class="sec wrap" id="faq">
       <div class="sec-head">
@@ -1053,7 +1013,7 @@
               </div>
               <div class="field">
                 <label for="ph">Phone</label>
-                <input id="ph" name="phone" type="tel" autocomplete="tel" placeholder="(903) 555-0100" required>
+                <input id="ph" name="phone" type="tel" autocomplete="tel" placeholder="(000) 000-0000" required>
               </div>
             </div>
             <div class="frow">
