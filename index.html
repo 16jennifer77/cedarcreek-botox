@@ -446,6 +446,39 @@
     .lake-card{margin-top:2rem;display:inline-grid;gap:.3rem;border:1px solid var(--hair);background:rgba(14,21,18,.58);backdrop-filter:blur(7px);padding:1.15rem 1.35rem;font-size:.92rem;color:var(--ink-2);line-height:1.6}
     .lake-card b{font-family:var(--disp);font-weight:500;color:var(--ink);font-size:1.02rem;letter-spacing:.02em}
 
+    /* ---------- v3: mobile rhythm pass (max-width:719px ONLY; desktop rules untouched) ---------- */
+    @media (max-width:719px){
+      /* section boundaries: sections open almost directly onto their title at 390w */
+      .sec{padding-block:1.75rem 2.9rem}
+      .sec-head{margin-bottom:2.1rem}
+      .sec-head h2{margin-bottom:.9rem}
+      .kicker{margin-bottom:10px}
+      /* credentials strip: four stacked rows shrink to two quiet dotted lines */
+      .creds ul{flex-direction:row;flex-wrap:wrap;justify-content:center;row-gap:.45rem;padding-block:1.05rem}
+      .creds li{font-size:.56rem;letter-spacing:.1em}
+      .creds li+li::before{content:"";width:4px;height:4px;border-radius:50%;transform:none;margin-inline:.55rem}
+      .creds li:nth-child(3)::before{content:none}
+      /* prescription fine print reads better centered under full-width rails */
+      .rail-note,.map-fine{text-align:center;margin-inline:auto}
+      /* film bands: viewport-height minimums leave big empty washes on tall phones */
+      .film{min-height:0}
+      .film-in{padding-block:4.25rem}
+      .film-quote .qmark{margin-bottom:1.1rem}
+      .film-quote figcaption{margin-top:1.4rem}
+      .lake{min-height:0}
+      .lake-in{padding-block:4.25rem}
+      /* stacked splits: desktop column gap is taller than needed between stacked blocks */
+      .map-grid,.result-grid,.appt-grid,.practice-grid,.offer{gap:2.2rem}
+      .area-row{padding-block:1.35rem}
+      .stats li{padding:1.6rem 1.25rem}
+      /* pricing table: tighter cells + narrower track so the Cedar Creek column peeks in as a scroll cue */
+      table{min-width:560px}
+      th,td{padding:.95rem 1rem}
+      thead th{font-size:1.05rem;padding-block:1.1rem}
+      .foot{padding-block:3rem 1.8rem}
+      .foot-grid{gap:2rem;margin-bottom:2.4rem}
+    }
+
     @media (prefers-reduced-motion:reduce){
       *,*::before,*::after{animation:none!important;transition:none!important}
       html.js .reveal:not(.in){transform:none}
@@ -537,7 +570,7 @@
           <a class="btn" href="#reserve">Book a complimentary consult
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="btn btn-ghost" href="tel:+19038025130">Call 903 802 5130</a>
+          <a class="btn btn-ghost" href="tel:+19038025130">Call (903) 802-5130</a>
         </div>
         <!-- SWAP: evaluation note -->
         <p class="hero-note reveal" style="--d:.24s">
@@ -963,7 +996,7 @@
         </details>
         <details>
           <summary>What does it cost?<span class="pm" aria-hidden="true"></span></summary>
-          <p class="ans">Your initial consultation is complimentary, so you can get answers before committing to anything. Because the right plan depends on the treatment, your provider goes over any costs clearly with you, with no surprises. Ask about Alle payment plans, or call 903 802 5130 with questions.</p>
+          <p class="ans">Your initial consultation is complimentary, so you can get answers before committing to anything. Because the right plan depends on the treatment, your provider goes over any costs clearly with you, with no surprises. Ask about Alle payment plans, or call (903) 802-5130 with questions.</p>
         </details>
         <details>
           <summary>Who places the injections?<span class="pm" aria-hidden="true"></span></summary>
@@ -979,7 +1012,7 @@
         </details>
         <details>
           <summary>Where are you, and when are you open?<span class="pm" aria-hidden="true"></span></summary>
-          <p class="ans">426 S. Gun Barrel City Lane, Suite B, in Gun Barrel City, right on Cedar Creek Lake. Monday to Friday 8:30 AM to 6:00 PM, Saturday 9:00 AM to 5:00 PM, closed Sunday. Book online, or call 903 802 5130.</p>
+          <p class="ans">426 S. Gun Barrel City Lane, Suite B, in Gun Barrel City, right on Cedar Creek Lake. Monday to Friday 8:30 AM to 6:00 PM, Saturday 9:00 AM to 5:00 PM, closed Sunday. Book online, or call (903) 802-5130.</p>
         </details>
       </div>
     </section>
