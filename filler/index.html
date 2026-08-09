@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#F4EFE7">
+
+<!--
+=====================================================================================
+  CEDAR CREEK COSMO · FILLER PAGE (Juvederm line) · built 2026-08-08
+  Single-file static page. One <style>, one <script>. No build step, no dependencies
+  beyond two Google font families. Sibling page: ../tox/ (wrinkle relaxers).
+=====================================================================================
+
+  1. REGISTER LOCKS (do not "correct" these)
+  -----------------------------------------------------------------------------------
+  · Display face is FRAUNCES 600. Body face is INSTRUMENT SANS 400/500.
+    INTER IS REGISTER-BANNED ON THIS PAGE. Do not swap the body font back to the house
+    DESIGN-SYSTEM default. Inter/Roboto/Open Sans/Lato read as AI-default on a premium
+    local clinic page. Two font families is a hard cap. Two preconnects. display=swap.
+  · The word "free" is banned page-wide. The register word is COMPLIMENTARY.
+    The numeral $0 is permitted exactly once (proof band). It appears once. Keep it once.
+  · CTA label is locked to one string everywhere: "Book a complimentary consult".
+    Nav, hero, both mid-page anchors, sticky mobile bar, form submit, footer. No variants.
+  · No em dashes. No exclamation points. Sentence case except kickers.
+  · No urgency bars, countdowns, popups, discount badges, scarcity furniture, timers.
+  · No before/after imagery. No people. No AI-generated faces. No stock photography.
+  · The honesty line ("if the honest answer is to wait, or to do nothing at all, that is
+    what you will hear") appears ONCE, in body copy, inside section 6. It is never a
+    headline and never above the fold. Moving it up fails the hero.
+
+  2. SWAP MANIFEST · every slot to replace before this page goes live
+  -----------------------------------------------------------------------------------
+  ASSETS (currently absolute URLs into the existing live deployment; re-host on the
+  client's own domain before launch and update these two src values):
+
+    [TEXTURE PLACEHOLDER 1] section 4 · gel-bead-syringe.jpg
+      https://16jennifer77.github.io/cedarcreek-botox/cedar-creek-assets/gel-bead-syringe.jpg
+      Duotone-tinted product still. Replace with a real Cedar Creek Cosmo studio still of
+      unopened product or the tray. No hands in frame, no skin, no needle in skin.
+      *** REQUIRED BEFORE PAID TRAFFIC, NOT OPTIONAL (raised 2026-08-08). *** The current
+      placeholder renders as a bare needle-tip close-up. Visible needles are a recurring
+      Meta and Google ad-destination flag on aesthetics pages. This swap gates paid launch.
+
+    [TEXTURE PLACEHOLDER 2] section 8 · droplet-dark-glass.jpg
+      https://16jennifer77.github.io/cedarcreek-botox/cedar-creek-assets/droplet-dark-glass.jpg
+      Duotone-tinted abstract still. Replace with a real studio detail (surface, glass,
+      light). Abstract only.
+
+    ASSET BLACKLIST · never reuse on this page or its sibling, AI-people provenance,
+    compliance finding C3: hero-treatment.jpg, hero-treatment.mp4, lakeside-portrait.jpg,
+    consult-mirror.jpg, portrait-window-light.jpg, steady-hands.jpg, and every file under
+    cedar-creek-films/*.mp4.
+
+  LINKS AND ENDPOINTS:
+    [PRE-LAUNCH · C2] Privacy Policy, Terms of Service, HIPAA Notice, Contact are href="#"
+      stubs. Real URLs are REQUIRED before this form collects any personally identifying
+      information. Do not launch the form against stubs.
+    [PRE-LAUNCH · C1] The consult form is HONESTLY UNWIRED. action="#" and the submit
+      handler tells the visitor plainly that the form is not connected yet and gives them
+      the phone number. Wire a real endpoint (GHL form or equivalent) and delete the
+      unwired notice block before launch. It must never appear to submit and silently drop.
+    [PRE-LAUNCH] Cross-links are relative: ../tox/ and ../filler/. The pair must deploy
+      into sibling directories together.
+
+  COPY SLOTS AWAITING A FACT:
+    [OPEN] Review quote. The live page's five-star quote is attributed to "Stephanie S."
+      and the studio employs a nurse named Stephanie. Until someone opens the Google
+      listing and confirms the reviewer is not staff, NO review quote ships. The proof
+      band ships on the four numbers alone. This is the default state of this file.
+      If and only if the check clears, add the quote AND the conditional attribution line
+      already drafted in the footer legal comment below.
+    [OPEN] Alle payment plans: copy states availability as a plain fact and directs the
+      question to the consultation. Do not convert this row into a promotion, a rate, a
+      term length, or a badge.
+
+  3. COUNSEL FENCE · read before any copy pass touches this page
+  -----------------------------------------------------------------------------------
+    [COUNSEL REVIEW REQUIRED BEFORE ANY ON-PAGE MENTION]
+    Hyaluronic acid filler dissolvability (hyaluronidase / "it can be dissolved") is the
+    single most reassuring fact available to this visitor, and that is exactly why it is
+    not on this page. It is a treatment claim about a prescription device. It is routed
+    to the consultation instead. A later copy pass will be tempted to add it. Do not add
+    it without counsel sign-off in writing.
+    Also fenced: no duration numbers ("lasts 12 months"), no pain ratings, no efficacy
+    or outcome promises, no candidacy claims, no pricing.
+    Every treatment statement on this page resolves to: decided at the consultation, by a
+    licensed provider, and only if appropriate for you.
+
+  4. CREDENTIAL ACCURACY
+  -----------------------------------------------------------------------------------
+    Allergan BOTOX Platinum Provider is a wrinkle relaxer award. It is deliberately NOT in
+    this page's hero trust chips, because chips sit next to filler claims. It appears once,
+    in section 9, worded as what it actually is.
+
+  5. STAMPS
+  -----------------------------------------------------------------------------------
+    healthcare-marketing-compliance 2026-08-08 · PASS (pre-launch items in SWAP)
+    conversion-design pass · 2026-08-08 · FIXES-APPLIED
+
+  6. FIXES APPLIED 2026-08-08 (verifier round 1)
+  -----------------------------------------------------------------------------------
+    F1 · PHI. The "no medical information" instruction was below the submit button,
+       after the open textarea. A visitor could type a symptom disclosure before ever
+       reading it. The instruction now leads the form note ABOVE the fields, and the
+       textarea carries its own placeholder saying the same thing. Do not move it back
+       under the button, and do not remove the placeholder.
+    F2 · CONTRAST. .legal p, .consent and .cap ran --ink-mute (#6B7C79), which measures
+       roughly 3.4:1 on --sand-deep and 4.0:1 on --paper, both under the 4.5:1 AA floor
+       for normal-size text. All three now run --ink-soft, matching the sibling page's
+       documented rule. --ink-mute survives ONLY on the ghosted sibling index, where it
+       is deliberately recessive and carries no unique information. Do not reintroduce
+       --ink-mute on legal, consent, or caption text.
+    F1c · The header is now position:sticky. On a 12,000px page the desktop reader had
+       no persistent CTA below the hero; the sticky bar is phone-only by design. Anchor
+       scroll-margin was raised to clear the sticky bar.
+    F3 · Hero grid align-items switched end to start, so the H1 sits directly under its
+       kicker instead of being dropped to the bottom of a tall row.
+    F5 · Mobile chips take the sibling's stacked-tick treatment below 640px instead of
+       wrapping ragged with hanging dots.
+    F6 · The shore card's caption no longer repeats the street line printed immediately
+       below it in the <address> block.
+    F2b · The sticky-bar call label wraps as "Call" / "(903) 802-5130" rather than
+       breaking mid-number.
+    F4b · Prescription status now appears in mid-page body copy (section 4), not only in
+       the footer legal block, matching the sibling page. Both instances stay.
+=====================================================================================
+-->
+
+<title>Juvederm Filler in Gun Barrel City, TX | Cedar Creek Cosmo</title>
+<meta name="description" content="Juvederm filler placed conservatively by licensed nurses in Gun Barrel City, Texas, on Cedar Creek Lake. One area at a time. Every plan starts with a complimentary consultation.">
+<link rel="canonical" href="https://cedarcreekcosmo.com/filler/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Instrument+Sans:wght@400;500&display=swap">
+
+<style>
+/* ============================================================
+   TOKENS · identical on both pages. FILLER takes the warm fork:
+   --sand-deep bands, --paper cards, gold ticks, gold-deep kickers.
+   No new hue. No champagne, no rose, no clay.
+   ============================================================ */
+:root{
+  --sand:#F4EFE7;
+  --sand-deep:#EAE2D6;
+  --paper:#FCFAF6;
+  --ink:#16302E;
+  --ink-soft:#3D5350;
+  /* F2 2026-08-08: --ink-mute is now the GHOST TOKEN ONLY. It measures ~3.4:1 on
+     --sand-deep and ~4.0:1 on --paper, under the 4.5:1 AA floor, so it is barred
+     from legal, consent, and caption text. It survives on the ghosted sibling
+     index, which is deliberately recessive and carries no unique information. */
+  --ink-mute:#6B7C79;      /* ghosted sibling index ONLY. never legal, consent, caption, body. */
+  --line:#DAD3C7;
+  --teal:#2F6F6A;
+  --teal-dark:#214E4A;
+  --sage:#CDE0D8;
+  --sage-tint:#E7F0EC;
+  --gold:#C8A36B;          /* rules, ticks, kickers. never body text. */
+  --gold-deep:#A8834A;     /* large type only, 20px and up */
+  --lake:#0E2B2F;
+  --lake-ink:#EDE6DA;
+
+  --h1:clamp(2.6rem,7.2vw,4.6rem);
+  --h2:clamp(2.05rem,4.6vw,3.25rem);   /* FILLER fork: one step larger than TOX */
+  --h3:clamp(1.22rem,2.2vw,1.5rem);
+  --body:clamp(1.0625rem,1.4vw,1.18rem);  /* 17px floor */
+  --kick:0.78rem;
+
+  --wrap:1120px;
+  --gutter:22px;
+  --sect:clamp(88px,11vw,152px);       /* FILLER fork: slower tempo */
+  --r:4px;
+}
+@media (min-width:760px){ :root{ --gutter:40px; } }
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--sand);
+  color:var(--ink);
+  font-family:"Instrument Sans","Libre Franklin",-apple-system,system-ui,sans-serif;
+  font-size:var(--body);
+  font-weight:400;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{
+  font-family:"Fraunces",Georgia,"Times New Roman",serif;
+  font-weight:600;
+  font-variation-settings:"SOFT" 0,"WONK" 0,"opsz" 96;
+  letter-spacing:-0.015em;
+  line-height:1.06;
+  margin:0;
+}
+h2{font-size:var(--h2);line-height:1.08}
+h3{font-size:var(--h3);line-height:1.22;letter-spacing:-0.012em}
+p{margin:0 0 1.1em}
+p:last-child{margin-bottom:0}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+section[id],main[id]{scroll-margin-top:24px}
+/* clears the sticky header (62px min-height + 20px padding) plus air */
+@media (min-width:760px){ section[id],main[id]{scroll-margin-top:96px} }
+.sect{padding-top:var(--sect);padding-bottom:var(--sect)}
+.band-deep{background:var(--sand-deep)}
+.measure{max-width:62ch}
+.kick{
+  font-size:var(--kick);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-weight:500;
+  color:var(--gold-deep);
+  margin:0 0 18px;
+}
+.lede{font-size:clamp(1.12rem,1.7vw,1.3rem);color:var(--ink-soft);line-height:1.55}
+.cap{font-size:0.95rem;line-height:1.5;color:var(--ink-soft)}   /* F2: was --ink-mute, failed AA */
+.nowrap{white-space:nowrap}
+.rule{height:1px;background:var(--line);border:0;margin:0}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:0 30px;
+  font-family:inherit;font-size:17px;font-weight:500;line-height:1.2;
+  text-decoration:none;border-radius:var(--r);border:1px solid transparent;
+  cursor:pointer;transition:background-color .18s ease,border-color .18s ease,color .18s ease;
+}
+.btn-primary{background:var(--teal);color:var(--paper);border-color:var(--teal)}
+.btn-primary:hover,.btn-primary:focus-visible{background:var(--teal-dark);border-color:var(--teal-dark)}
+.btn-secondary{background:transparent;color:var(--ink);border-color:var(--gold-deep)}
+.btn-secondary:hover,.btn-secondary:focus-visible{background:var(--paper);border-color:var(--ink)}
+.btn-row{display:flex;flex-wrap:wrap;gap:12px}
+.btn-row .btn{flex:1 1 100%}
+@media (min-width:560px){ .btn-row .btn{flex:0 0 auto} }
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+
+/* quiet mid-page anchor */
+.anchor-link{
+  display:inline-block;margin-top:44px;
+  color:var(--teal);text-decoration:none;font-weight:500;
+  border-bottom:1px solid rgba(47,111,106,.35);padding-bottom:2px;
+}
+.anchor-link:hover{border-bottom-color:var(--teal)}
+
+/* ---------- 1 · header ---------- */
+.site-head{
+  position:relative;z-index:50;
+  background:var(--sand);
+  border-bottom:1px solid var(--line);
+}
+/* F1 · sticky from 760px UP only. On a 12,000px desktop page the header is the
+   only persistent CTA the reader keeps, because the sticky book bar is phone-only
+   by design. Below 760px the bottom bar already carries the CTA, and a two-line
+   sticky header would eat a permanent slice of an 844px viewport, so the header
+   scrolls away there. --sand is fully opaque, so nothing scrolls through it. */
+@media (min-width:760px){
+  .site-head{position:sticky;top:0}
+}
+.head-in{display:flex;align-items:center;gap:20px;min-height:62px;padding-top:10px;padding-bottom:10px}
+.brand{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.0625rem;
+  letter-spacing:-0.01em;text-decoration:none;line-height:1.15;flex:0 0 auto;
+}
+/* brand sub-line uses --ink-soft, never --ink-mute: the mute token is barred under 15px */
+.brand-sub{
+  display:block;font-family:"Instrument Sans","Libre Franklin",system-ui,sans-serif;
+  font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-soft);margin-top:4px;
+}
+.nav{display:flex;gap:22px;margin-left:auto;align-items:center;flex:0 0 auto}
+.nav a{
+  font-size:0.95rem;text-decoration:none;color:var(--ink-soft);
+  padding-bottom:3px;border-bottom:1px solid transparent;white-space:nowrap;
+}
+/* Phone header: brand plus both treatment links have to hold ONE line inside
+   346px of content width. Tightened rather than dropped, because the cross-link
+   to the sibling page is the only navigation this page has. */
+@media (max-width:560px){
+  .head-in{gap:12px}
+  .brand{font-size:1rem}
+  .brand-sub{font-size:.68rem;letter-spacing:.1em}
+  .nav{gap:14px}
+  .nav a{font-size:.88rem}
+}
+.nav a:hover{color:var(--ink)}
+.nav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--gold)}
+.head-cta{display:none}
+@media (min-width:900px){
+  .head-cta{display:inline-flex;min-height:44px;padding:0 20px;font-size:15px}
+}
+
+/* ---------- 2 · hero ---------- */
+.hero{padding-top:clamp(34px,5vw,72px);padding-bottom:clamp(52px,7vw,96px)}
+.hero h1{font-size:var(--h1);max-width:15ch;margin-bottom:28px}
+.hero-sub{max-width:46ch;font-size:clamp(1.0625rem,1.5vw,1.24rem);color:var(--ink-soft);line-height:1.55}
+.hero-line{margin-top:6px;font-weight:500;color:var(--ink)}
+.hero .btn-row{margin-top:26px}
+@media (min-width:900px){
+  /* F3 · align-items:start, not end. With end, the tall right column stretched
+     row 2 and dropped the H1 to the bottom of it, leaving a hole under the
+     kicker and letting the sub-head read before the headline. The asymmetric
+     two-column shape is kept; only the vertical anchor changed. */
+  .hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:56px;align-items:start}
+  .hero .kick,.hero h1{grid-column:1}
+  .hero-right{grid-column:2;grid-row:2;padding-top:8px}
+  .hero h1{max-width:none}
+}
+
+/* ---------- 3 · trust chips ---------- */
+.chips{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding-top:20px;padding-bottom:20px;
+}
+.chips ul{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;align-items:center;
+  gap:10px 0;
+  font-size:var(--kick);text-transform:uppercase;letter-spacing:.14em;
+  font-weight:500;color:var(--ink-soft);
+}
+.chips li{display:flex;align-items:center}
+.chips li + li::before{
+  content:"";display:block;width:5px;height:5px;border-radius:50%;
+  background:var(--gold);margin:0 14px;flex:0 0 auto;
+}
+/* F5 · Four chips cannot honestly fit two lines at 390px without dropping below
+   the 11px floor, so they stack, each carrying its own gold tick. Uniform beats a
+   ragged wrap where line one has no bullet and lines two through four hang one.
+   Same treatment as the sibling page. */
+@media (max-width:640px){
+  .chips ul{flex-direction:column;align-items:flex-start;gap:9px 0;line-height:1.35}
+  .chips li{align-items:baseline;gap:10px}
+  .chips li::before,.chips li + li::before{
+    content:"";display:block;width:12px;height:1px;border-radius:0;
+    background:var(--gold);margin:0;flex:0 0 auto;transform:translateY(-4px);
+  }
+}
+
+/* ---------- 4 · what it is (single wide panel) ---------- */
+.panel{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(26px,4vw,52px);
+}
+.panel h2{margin-bottom:22px;max-width:18ch}
+.panel .lede{max-width:60ch}
+.panel-facts{
+  list-style:none;margin:34px 0 0;padding:28px 0 0;border-top:1px solid var(--line);
+  display:grid;gap:16px;
+}
+@media (min-width:760px){ .panel-facts{grid-template-columns:repeat(3,1fr);gap:28px} }
+.panel-facts li{position:relative;padding-left:20px;color:var(--ink-soft);font-size:1rem;line-height:1.5}
+.panel-facts li::before{
+  content:"";position:absolute;left:0;top:.62em;width:9px;height:1px;background:var(--gold);
+}
+/* F4b · mid-page prescription-status note. Matches the sibling page's .note so the
+   status is stated in body copy and not only in the footer legal block. */
+.note{margin-top:34px;max-width:62ch;font-size:0.98rem;line-height:1.6;color:var(--ink-soft)}
+.texture{margin-top:clamp(26px,3.6vw,40px)}
+.texture figure{margin:0}
+.texture img{
+  width:100%;height:clamp(150px,22vw,260px);object-fit:cover;border-radius:var(--r);
+  filter:sepia(.32) saturate(.72) contrast(1.02);
+}
+.texture figcaption{
+  background:var(--sand-deep);border-radius:0 0 var(--r) var(--r);
+  margin-top:-4px;padding:12px 16px;
+}
+
+/* ---------- 5 · the measure ---------- */
+.measure-sect .m-head{max-width:52ch;margin-bottom:clamp(44px,6vw,72px)}
+.m-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.m-row{padding:clamp(26px,3.4vw,40px) 0;border-bottom:1px solid var(--line)}
+@media (min-width:840px){
+  .m-row{display:grid;grid-template-columns:88px minmax(0,20ch) minmax(0,1fr);gap:34px;align-items:start}
+}
+.m-num{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:-0.02em;color:var(--gold-deep);
+  line-height:1;
+}
+.m-name{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:var(--h3);letter-spacing:-0.012em;line-height:1.2;margin:10px 0 0;
+}
+@media (min-width:840px){ .m-name{margin-top:2px} }
+.m-body{margin-top:12px;color:var(--ink-soft);max-width:52ch}
+@media (min-width:840px){ .m-body{margin-top:0} }
+.m-tag{
+  display:inline-block;margin-top:12px;
+  font-size:var(--kick);text-transform:uppercase;letter-spacing:.14em;font-weight:500;
+  color:var(--gold-deep);
+}
+.m-track{display:block;position:relative;height:1px;margin-top:22px;grid-column:1/-1}
+.m-rule{
+  display:block;height:1px;width:100%;background:var(--gold);
+  transform:scaleX(0);transform-origin:left center;
+  transition:transform 1.05s cubic-bezier(.2,.7,.25,1);
+}
+.m-row.drawn .m-rule{transform:scaleX(.62)}
+.m-dot{
+  position:absolute;top:50%;left:62%;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;
+  border-radius:50%;background:var(--gold-deep);
+  opacity:0;transition:opacity .3s ease .85s;
+}
+.m-row.drawn .m-dot{opacity:1}
+.m-caption{margin-top:clamp(34px,4.4vw,54px);max-width:46ch}
+.m-caption p{
+  font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:clamp(1.3rem,2.4vw,1.7rem);letter-spacing:-0.015em;line-height:1.25;color:var(--ink);
+}
+
+/* ---------- 6 · one at a time ---------- */
+.pace{display:grid;gap:clamp(28px,4vw,64px)}
+@media (min-width:900px){ .pace{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start} }
+.pace h2{max-width:14ch}
+.pace-steps{list-style:none;margin:30px 0 0;padding:0}
+.pace-steps li{
+  padding:18px 0 18px 26px;border-top:1px solid var(--line);position:relative;color:var(--ink-soft);
+}
+.pace-steps li:last-child{border-bottom:1px solid var(--line)}
+.pace-steps li::before{
+  content:"";position:absolute;left:0;top:1.72em;width:11px;height:1px;background:var(--gold);
+}
+.pace-steps strong{color:var(--ink);font-weight:500}
+.honesty{
+  margin-top:30px;padding-top:26px;border-top:1px solid var(--line);
+  max-width:56ch;
+}
+
+/* ---------- 7 · proof band ---------- */
+.proof{background:var(--lake);color:var(--lake-ink)}
+.proof .kick{color:var(--gold)}
+.proof-grid{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.proof-grid li{padding:26px 0;border-top:1px solid rgba(200,163,107,.42)}
+.proof-grid li:last-child{border-bottom:1px solid rgba(200,163,107,.42)}
+@media (min-width:760px){
+  .proof-grid{grid-template-columns:repeat(4,1fr);gap:0 34px}
+  .proof-grid li{border-bottom:1px solid rgba(200,163,107,.42);padding:30px 0}
+}
+.proof-num{
+  display:block;font-family:"Fraunces",Georgia,serif;font-weight:600;
+  font-size:clamp(2rem,4vw,2.7rem);letter-spacing:-0.02em;line-height:1;
+}
+.proof-lab{display:block;margin-top:12px;font-size:0.98rem;line-height:1.45;color:rgba(237,230,218,.82)}
+.proof-note{margin-top:clamp(30px,4vw,44px);max-width:56ch;color:rgba(237,230,218,.78);font-size:0.98rem}
+
+/* ---------- 8 · the visit ---------- */
+.visit-head{max-width:50ch;margin-bottom:clamp(40px,5vw,64px)}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:0}
+@media (min-width:860px){ .steps{grid-template-columns:repeat(4,1fr);gap:0 30px} }
+.steps li{padding:26px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+@media (min-width:860px){ .steps li{border-bottom:1px solid var(--line);padding:28px 0} }
+.step-n{
+  display:block;font-size:var(--kick);text-transform:uppercase;letter-spacing:.16em;
+  font-weight:500;color:var(--gold-deep);margin-bottom:12px;
+}
+.steps h3{margin-bottom:10px}
+.steps p{color:var(--ink-soft);font-size:1rem;line-height:1.55}
+
+/* ---------- 9 · why here ---------- */
+.why{display:grid;gap:clamp(34px,4.4vw,60px)}
+@media (min-width:960px){ .why{grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr)} }
+.why-head{max-width:22ch;margin-bottom:8px}
+.why-sub{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:var(--h3);letter-spacing:-0.012em;color:var(--gold-deep);margin:14px 0 0}
+.why-rows{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid var(--line)}
+.why-rows li{padding:24px 0;border-bottom:1px solid var(--line)}
+@media (min-width:680px){
+  .why-rows li{display:grid;grid-template-columns:minmax(0,15ch) minmax(0,1fr);gap:28px;align-items:start}
+}
+.why-lab{
+  display:block;
+  font-size:var(--kick);text-transform:uppercase;letter-spacing:.14em;font-weight:500;
+  color:var(--gold-deep);padding-top:.35em;
+}
+.why-val{color:var(--ink-soft);margin-top:8px}
+@media (min-width:680px){ .why-val{margin-top:0} }
+.why-val strong{color:var(--ink);font-weight:500}
+.shore{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,3vw,32px)}
+.shore svg{display:block;width:100%;height:auto}
+.shore .cap{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.shore address{font-style:normal;margin-top:16px;line-height:1.7;color:var(--ink-soft);font-size:1rem}
+.shore address a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(47,111,106,.3)}
+
+/* ---------- 10 · ghosted sibling band ---------- */
+.sib{border-top:1px solid var(--line)}
+.sib-in{display:grid;gap:clamp(30px,4vw,56px)}
+@media (min-width:900px){ .sib-in{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center} }
+.sib-copy h2{font-size:clamp(1.6rem,3.2vw,2.3rem);max-width:20ch;margin-bottom:20px}
+.sib-copy p{color:var(--ink-soft);max-width:46ch}
+.sib-link{
+  display:inline-block;margin-top:10px;color:var(--teal);text-decoration:none;font-weight:500;
+  border-bottom:1px solid rgba(47,111,106,.35);padding-bottom:2px;
+}
+.sib-link:hover{border-bottom-color:var(--teal)}
+.ghost{list-style:none;margin:0;padding:0}
+.ghost li{padding:18px 0}
+.ghost-top{display:flex;align-items:baseline;gap:18px}
+.ghost-n{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:1.35rem;color:var(--ink-mute);opacity:.75;line-height:1}
+.ghost-name{font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:var(--h3);letter-spacing:-0.012em;color:var(--ink-mute);line-height:1.2}
+.ghost-rule{display:block;height:1px;background:var(--line);opacity:.3;margin-top:16px}
+.ghost-cap{margin-top:18px}
+
+/* ---------- 11 · faq ---------- */
+.faq-head{max-width:24ch;margin-bottom:clamp(36px,4.6vw,58px)}
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{
+  list-style:none;cursor:pointer;padding:24px 44px 24px 0;position:relative;
+  font-family:"Fraunces",Georgia,serif;font-weight:600;font-size:var(--h3);
+  letter-spacing:-0.012em;line-height:1.25;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";position:absolute;right:6px;top:50%;width:13px;height:1px;background:var(--gold-deep);
+}
+.faq summary::before{
+  content:"";position:absolute;right:12px;top:50%;width:1px;height:13px;margin-top:-6px;
+  background:var(--gold-deep);transition:opacity .2s ease;
+}
+.faq details[open] summary::before{opacity:0}
+.faq .ans{padding:0 0 26px;max-width:62ch;color:var(--ink-soft)}
+.faq .ans a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(47,111,106,.3)}
+
+/* ---------- 12 · book ---------- */
+.book{display:grid;gap:clamp(34px,4.6vw,60px)}
+@media (min-width:960px){ .book{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start} }
+.book h2{max-width:12ch;margin-bottom:22px}
+.book-aside .lede{max-width:44ch}
+.book-facts{list-style:none;margin:30px 0 0;padding:26px 0 0;border-top:1px solid var(--line)}
+.book-facts li{position:relative;padding:0 0 12px 20px;color:var(--ink-soft);font-size:1rem}
+.book-facts li::before{content:"";position:absolute;left:0;top:.65em;width:9px;height:1px;background:var(--gold)}
+.book-facts a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(47,111,106,.3)}
+.form-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  padding:clamp(24px,3.4vw,40px);
+  box-shadow:0 18px 50px -34px rgba(22,48,46,.38);
+}
+.form-note{margin-bottom:24px;color:var(--ink-soft);font-size:1rem;max-width:48ch}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:0.95rem;font-weight:500;margin-bottom:7px}
+.field input,.field select,.field textarea{
+  width:100%;font-family:inherit;font-size:17px;color:var(--ink);
+  background:var(--sand);border:1px solid var(--line);border-radius:var(--r);
+  padding:13px 14px;min-height:52px;line-height:1.4;
+}
+.field textarea{min-height:96px;resize:vertical}
+/* placeholder carries a compliance instruction, so it runs --ink-soft (6.9:1 on
+   --sand), not a browser-default grey */
+.field textarea::placeholder{color:var(--ink-soft);opacity:1}
+.field select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--ink-soft) 50%),linear-gradient(135deg,var(--ink-soft) 50%,transparent 50%);background-position:calc(100% - 20px) 24px,calc(100% - 15px) 24px;background-size:5px 5px,5px 5px;background-repeat:no-repeat}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);outline:2px solid rgba(47,111,106,.22);outline-offset:1px}
+.form-card .btn-primary{width:100%;margin-top:6px}
+.consent{margin-top:14px;font-size:0.94rem;line-height:1.5;color:var(--ink-soft)}  /* F2: was --ink-mute, failed AA */
+.form-status{
+  margin-top:18px;padding:16px 18px;border:1px solid var(--gold);border-radius:var(--r);
+  background:var(--sand-deep);font-size:1rem;line-height:1.55;
+}
+.form-status[hidden]{display:none}
+.form-status a{color:var(--teal);font-weight:500}
+
+/* ---------- 13 · footer ---------- */
+.foot{background:var(--sand-deep);border-top:1px solid var(--line)}
+.foot-in{padding-top:clamp(52px,6vw,80px);padding-bottom:clamp(52px,6vw,80px)}
+.foot-cols{display:grid;gap:34px}
+@media (min-width:820px){ .foot-cols{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1fr)} }
+.foot h3{font-size:1.05rem;margin-bottom:14px}
+.foot address{font-style:normal;line-height:1.75;color:var(--ink-soft);font-size:1rem}
+.foot a{color:var(--ink-soft);text-decoration:none;border-bottom:1px solid transparent}
+.foot a:hover{color:var(--ink);border-bottom-color:var(--line)}
+.foot-links{list-style:none;margin:0;padding:0;line-height:2}
+.foot-cta{color:var(--teal);font-weight:500;border-bottom:1px solid rgba(47,111,106,.35);padding-bottom:2px}
+.foot-cta:hover{color:var(--teal-dark);border-bottom-color:var(--teal-dark)}
+.legal{margin-top:clamp(40px,5vw,60px);padding-top:28px;border-top:1px solid var(--line)}
+/* F2 · the compliance-bearing block. --ink-soft measures 6.5:1 on --sand-deep;
+   --ink-mute measured roughly 3.4:1 here and buried the text it must not bury. */
+.legal p{font-size:0.94rem;line-height:1.65;color:var(--ink-soft);max-width:80ch;margin-bottom:.85em}
+.legal .copyright{margin-top:22px}
+
+/* ---------- sticky mobile bar ---------- */
+/* zero-height inline elements can read as never-intersecting; give the sentinel a box */
+#hero-end{display:block;height:1px}
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:var(--paper);border-top:1px solid var(--line);
+  padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));
+  display:flex;gap:10px;
+  transform:translateY(102%);transition:transform .28s ease;
+}
+.sticky.on{transform:translateY(0)}
+.sticky .btn{flex:1 1 0;min-height:52px;padding:0 12px;font-size:16px;text-align:center}
+@media (min-width:760px){ .sticky{display:none} }
+/* keep the footer clear of the bar on phones */
+@media (max-width:759px){ body{padding-bottom:84px} }
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms;animation-iteration-count:1;scroll-behavior:auto}
+  .m-rule{transform:scaleX(.62);transition:none}
+  .m-dot{opacity:1;transition:none}
+  .m-row.drawn .m-rule{transform:scaleX(.62)}
+  .sticky{transition:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ============================ 1 · HEADER ============================ -->
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="brand" href="../filler/">Cedar Creek Cosmo<span class="brand-sub">Gun Barrel City, Texas</span></a>
+    <nav class="nav" aria-label="Injectable treatments">
+      <a href="../tox/">Wrinkle relaxers</a>
+      <a href="../filler/" aria-current="page">Filler</a>
+    </nav>
+    <a class="btn btn-primary head-cta" href="#book">Book a complimentary consult</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================ 2 · HERO ============================ -->
+<section class="wrap hero">
+  <p class="kick">The Juvederm line · Gun Barrel City, Texas</p>
+  <h1>Filler nobody can point to.</h1>
+  <div class="hero-right">
+    <p class="hero-sub">The Juvederm line, placed conservatively by licensed nurses in Gun Barrel City, right here on Cedar Creek Lake. One area at a time, built gradually, so nothing about your face announces itself.</p>
+    <p class="hero-sub hero-line">Every plan starts with a complimentary consultation.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#book">Book a complimentary consult</a>
+      <a class="btn btn-secondary" href="tel:+19038025130">Call (903) 802-5130</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 3 · TRUST CHIPS ============================ -->
+<!-- Credential accuracy: the Allergan BOTOX Platinum Provider award is a wrinkle relaxer
+     award and is deliberately NOT in this row. It appears once, in section 9. -->
+<div class="wrap">
+  <div class="chips">
+    <ul>
+      <li>Placed by licensed nurses</li>
+      <li>Hyaluronic acid, the Juvederm line</li>
+      <li>Rated 5.0 on Google</li>
+      <li>Right here on the lake</li>
+    </ul>
+  </div>
+</div>
+<span id="hero-end" aria-hidden="true"></span>
+
+<!-- ============================ 4 · WHAT IT IS ============================ -->
+<section class="sect" id="what">
+  <div class="wrap">
+    <div class="panel">
+      <p class="kick">What it is</p>
+      <h2>Hyaluronic acid, a sugar your skin already makes</h2>
+      <p class="lede">Juvederm is a line of hyaluronic acid fillers. Hyaluronic acid is a sugar your skin already makes, and the gel form of it is used to restore subtle volume and smooth the look of folds. It is placed, not injected into a muscle, and it is placed in small amounts.</p>
+      <ul class="panel-facts">
+        <li>One product family here, the Juvederm line, rather than a menu of brands.</li>
+        <li>Placed by licensed nurses, in a studio, with the same hands each visit.</li>
+        <li>Whether filler suits you at all is decided at your complimentary consultation.</li>
+      </ul>
+
+      <!-- F4b · prescription status in body copy, mirroring the sibling page. The footer
+           legal block carries it too. Do not remove either instance. -->
+      <p class="note">Juvederm fillers are prescription treatments. What suits your face, if anything, and what it costs is talked through plainly at your complimentary consultation. Individual results vary.</p>
+
+      <div class="texture">
+        <figure>
+          <!-- [TEXTURE PLACEHOLDER 1] swap for a real Cedar Creek Cosmo studio still -->
+          <img src="https://16jennifer77.github.io/cedarcreek-botox/cedar-creek-assets/gel-bead-syringe.jpg"
+               width="1600" height="900" loading="lazy" decoding="async"
+               alt="A single bead of clear hyaluronic acid gel resting at the tip of a sealed syringe on a studio surface.">
+          <figcaption class="cap">Product still from the studio. No patient photography appears on this page, and no before and after images are shown.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 5 · THE MEASURE ============================ -->
+<section class="sect band-deep measure-sect" id="areas">
+  <div class="wrap">
+    <div class="m-head">
+      <p class="kick">The measure</p>
+      <h2>Five areas, one at a time</h2>
+      <p class="lede" style="margin-top:20px">These are the areas filler is placed here. A plan almost never touches more than one of them to begin, and what is right for you, if any of it is, is decided together.</p>
+    </div>
+
+    <ul class="m-list" id="measure-list">
+      <li class="m-row">
+        <span class="m-num">01</span>
+        <h3 class="m-name">Lips</h3>
+        <div class="m-body">
+          <p>Thin lips and lipstick lines, restored gently with hyaluronic acid filler. Subtle by design, never overdone.</p>
+        </div>
+        <span class="m-track"><span class="m-rule"></span><span class="m-dot"></span></span>
+      </li>
+      <li class="m-row">
+        <span class="m-num">02</span>
+        <h3 class="m-name">Cheeks</h3>
+        <div class="m-body">
+          <p>Subtle volume where cheeks have flattened, lifting the midface and catching light the way it used to.</p>
+        </div>
+        <span class="m-track"><span class="m-rule"></span><span class="m-dot"></span></span>
+      </li>
+      <li class="m-row">
+        <span class="m-num">03</span>
+        <h3 class="m-name">Under the eyes</h3>
+        <div class="m-body">
+          <p>Softens hollowness in the under eye area so you look rested, planned carefully and placed conservatively.</p>
+          <span class="m-tag">An advanced area, planned conservatively</span>
+        </div>
+        <span class="m-track"><span class="m-rule"></span><span class="m-dot"></span></span>
+      </li>
+      <li class="m-row">
+        <span class="m-num">04</span>
+        <h3 class="m-name">Smile and marionette lines</h3>
+        <div class="m-body">
+          <p>The folds that frame the mouth, from the nose down. Smoothed with filler so they soften without changing your smile.</p>
+        </div>
+        <span class="m-track"><span class="m-rule"></span><span class="m-dot"></span></span>
+      </li>
+      <li class="m-row">
+        <span class="m-num">05</span>
+        <h3 class="m-name">Chin and jawline</h3>
+        <div class="m-body">
+          <p>A weak chin or a soft jawline, given quiet definition with filler.</p>
+          <span class="m-tag">An advanced area, planned conservatively</span>
+        </div>
+        <span class="m-track"><span class="m-rule"></span><span class="m-dot"></span></span>
+      </li>
+    </ul>
+
+    <div class="m-caption">
+      <p>Volume stops while the face still reads as yours.</p>
+    </div>
+
+    <a class="anchor-link" href="#book">Book a complimentary consult &rarr;</a>
+  </div>
+</section>
+
+<!-- ============================ 6 · ONE AT A TIME ============================ -->
+<!-- The honesty line lives here and only here. Never a headline. Never above the fold. -->
+<section class="sect" id="pace">
+  <div class="wrap pace">
+    <div>
+      <p class="kick">One at a time</p>
+      <h2>Built over visits, never in one sitting</h2>
+    </div>
+    <div>
+      <p class="lede">The way an overfilled face happens is rarely one bad decision. It is volume added faster than anyone stopped to look at it. So the pacing here is the plan, not a preference.</p>
+      <ul class="pace-steps">
+        <li><strong>One area to begin.</strong> Not a package, not a full face, and not two areas because you are already in the chair.</li>
+        <li><strong>A conservative amount.</strong> Placed where it does the most, and no more than that.</li>
+        <li><strong>Reviewed before more is added.</strong> You come back, it is looked at in daylight, and only then is anything else considered.</li>
+      </ul>
+      <div class="honesty">
+        <p>Some visits end with a plan. Some end with a date to look again. If the honest answer is to wait, or to do nothing at all, that is what you will hear, and you will not be charged for hearing it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 7 · PROOF BAND ============================ -->
+<!-- Ships on the four numbers alone. No review quote until the reviewer-name collision
+     check clears. See SWAP manifest, section 2. -->
+<section class="sect proof" id="proof">
+  <div class="wrap">
+    <p class="kick">On the record</p>
+    <ul class="proof-grid">
+      <li><span class="proof-num">5.0</span><span class="proof-lab">Google rating</span></li>
+      <li><span class="proof-num">34</span><span class="proof-lab">Google reviews</span></li>
+      <li><span class="proof-num">$0</span><span class="proof-lab">Consultation, every time</span></li>
+      <li><span class="proof-num">2020</span><span class="proof-lab">On the lake since</span></li>
+    </ul>
+    <p class="proof-note">Rating and review count are as published on the studio's Google Business Profile and change as reviews are added. Individual results vary.</p>
+  </div>
+</section>
+
+<!-- ============================ 8 · THE VISIT ============================ -->
+<section class="sect" id="visit">
+  <div class="wrap">
+    <div class="visit-head">
+      <p class="kick">The visit</p>
+      <h2>From first question to a plan you understand</h2>
+      <p class="lede" style="margin-top:20px">The placement is the shortest part of the visit. The looking before it, and the follow up after it, are where the result is made.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="step-n">01</span>
+        <h3>Reach out</h3>
+        <p>Call or request a complimentary consultation online. Tell us what you have been noticing, or just what you have been wondering about.</p>
+      </li>
+      <li>
+        <span class="step-n">02</span>
+        <h3>Consultation</h3>
+        <p>A licensed provider looks first, listens, and is plain about your options, including the option to wait. Costs are explained before anything is scheduled.</p>
+      </li>
+      <li>
+        <span class="step-n">03</span>
+        <h3>One area</h3>
+        <p>If you decide to go ahead and it is appropriate for you, the plan begins with a single area and a conservative amount.</p>
+      </li>
+      <li>
+        <span class="step-n">04</span>
+        <h3>Seen again</h3>
+        <p>You are looked at again afterward, in daylight, before anything more is discussed. That review is part of the plan, not an upsell.</p>
+      </li>
+    </ol>
+    <div class="texture">
+      <figure>
+        <!-- [TEXTURE PLACEHOLDER 2] swap for a real Cedar Creek Cosmo studio detail -->
+        <img src="https://16jennifer77.github.io/cedarcreek-botox/cedar-creek-assets/droplet-dark-glass.jpg"
+             width="1600" height="900" loading="lazy" decoding="async"
+             alt="A single droplet on dark glass, lit from one side, photographed in the studio.">
+        <figcaption class="cap">Studio detail. Cedar Creek Cosmo does not publish patient photographs, and real faces stay private here.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 9 · WHY HERE ============================ -->
+<section class="sect band-deep" id="why">
+  <div class="wrap why">
+    <div>
+      <p class="kick">Why here</p>
+      <h2 class="why-head">Where the plan gets made, before anything is placed</h2>
+      <p class="why-sub">A chain chair is not a studio.</p>
+
+      <ul class="why-rows">
+        <li>
+          <span class="why-lab">The plan</span>
+          <div class="why-val">Your provider studies your face first: how it moves, where volume has gone, what should be restored and what should stay. Placement is planned to suit your features and added gradually, so the result stays balanced.</div>
+        </li>
+        <li>
+          <span class="why-lab">Who places it</span>
+          <div class="why-val"><strong>Christyl, Kelsey, and Stephanie</strong> are the licensed nurses who place the injections here. The studio is an Allergan Botox Platinum Provider, an award that reflects years of wrinkle relaxer experience, and the same hands place the filler.</div>
+        </li>
+        <li>
+          <span class="why-lab">Who built it</span>
+          <div class="why-val">Cedar Creek Cosmo was founded in 2020 by <strong>Lance and Brennan Popham</strong>, who live here. This is a lake town, and the people you pass at the grocery store are the people who review the work.</div>
+        </li>
+        <li>
+          <span class="why-lab">Alle payment plans</span>
+          <div class="why-val"><strong>Ask about Alle payment plans.</strong> Alle is Allergan's rewards program, and payment plans through it can spread a plan over time rather than paying in one visit.</div>
+        </li>
+        <li>
+          <span class="why-lab">No sell</span>
+          <div class="why-val">No menus, no packages pushed at the chair, and no surprises on the invoice. If the plan is one area this year, the plan is one area this year.</div>
+        </li>
+        <li>
+          <span class="why-lab">The drive</span>
+          <div class="why-val">Gun Barrel City is a shorter drive than Dallas or Tyler for most of the lake, and the person who plans your treatment is the person who places it.</div>
+        </li>
+      </ul>
+
+      <a class="anchor-link" href="#book">Book a complimentary consult &rarr;</a>
+    </div>
+
+    <!-- GRAFT 2 · shoreline motif. Same stroke grammar as The Measure:
+         a drawn gold line ending in a dot. Inline SVG, zero bytes over the wire. -->
+    <aside class="shore">
+      <svg viewBox="0 0 320 200" role="img" aria-labelledby="shore-title" focusable="false">
+        <title id="shore-title">A fine line drawing of the Cedar Creek Lake shoreline with a marked point at the studio's location in Gun Barrel City.</title>
+        <path d="M8 24 C46 30, 62 52, 58 74 C54 96, 76 104, 96 100 C118 96, 130 78, 152 82 C176 86, 180 108, 168 124 C156 140, 168 158, 194 160 C222 162, 238 146, 252 128 C266 110, 290 108, 312 116"
+              fill="none" stroke="#C8A36B" stroke-width="1" stroke-linecap="round"/>
+        <path d="M30 96 C58 122, 74 140, 86 166 C94 182, 112 190, 134 186"
+              fill="none" stroke="#C8A36B" stroke-width="1" stroke-linecap="round" opacity=".55"/>
+        <path d="M206 40 C226 52, 250 56, 274 52"
+              fill="none" stroke="#C8A36B" stroke-width="1" stroke-linecap="round" opacity=".4"/>
+        <line x1="168" y1="124" x2="168" y2="124" stroke="#A8834A" stroke-width="1"/>
+        <circle cx="168" cy="124" r="2.5" fill="#A8834A"/>
+      </svg>
+      <!-- F6 · caption carries the place, the address block carries the address.
+           These two lines used to open with the identical street line, back to back. -->
+      <p class="cap">The studio, marked on Cedar Creek Lake.</p>
+      <address>
+        426 S. Gun Barrel City Lane, Suite B<br>
+        Gun Barrel City, TX 75156<br>
+        <a href="tel:+19038025130">(903) 802-5130</a>
+      </address>
+    </aside>
+  </div>
+</section>
+
+<!-- ============================ 10 · GHOSTED SIBLING BAND ============================ -->
+<!-- GRAFT 1 · the other page's areas, rendered but not drawn. The upper face is the half
+     this page does not treat. One of two cross-links to ../tox/ (the other is in the FAQ).
+     Do not add a third. -->
+<section class="sect sib" id="sibling">
+  <div class="wrap sib-in">
+    <div class="sib-copy">
+      <p class="kick">The other half of the face</p>
+      <h2>Filler restores volume. Relaxers soften the lines expression makes.</h2>
+      <p>Many faces need one and not the other, and plenty of people arrive having searched for the wrong one. That is a normal way to start, and it is sorted out by someone who looks at your face first.</p>
+      <a class="sib-link" href="../tox/">See Botox and Dysport &rarr;</a>
+    </div>
+    <ul class="ghost" aria-label="Areas treated with wrinkle relaxers on the companion page">
+      <li>
+        <span class="ghost-top"><span class="ghost-n">01</span><span class="ghost-name">Forehead creases</span></span>
+        <span class="ghost-rule"></span>
+      </li>
+      <li>
+        <span class="ghost-top"><span class="ghost-n">02</span><span class="ghost-name">Frown lines</span></span>
+        <span class="ghost-rule"></span>
+      </li>
+      <li>
+        <span class="ghost-top"><span class="ghost-n">03</span><span class="ghost-name">Crow's feet</span></span>
+        <span class="ghost-rule"></span>
+      </li>
+      <li class="ghost-cap"><span class="cap">Upper face. Treated with a relaxer, not with filler.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ 11 · FAQ ============================ -->
+<section class="sect band-deep" id="faq">
+  <div class="wrap">
+    <p class="kick">Questions</p>
+    <h2 class="faq-head">The things people ask before they book</h2>
+    <div class="faq">
+
+      <details open>
+        <summary>Will I look overfilled?</summary>
+        <div class="ans">
+          <p>That is the fear most people carry into the room, and it is answered by how the work is planned rather than by a promise. Filler here starts with one area and a conservative amount, and it is looked at again before anything else is added. Nothing is built in a single sitting. That pacing is the whole reason a result can sit on a face without announcing itself. Individual results vary.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Who places the filler?</summary>
+        <div class="ans">
+          <p>Licensed nurses. Christyl, Kelsey, and Stephanie are the RNs who place the injections at Cedar Creek Cosmo, and the nurse who plans your treatment is the nurse who performs it. The studio has been on the lake since 2020 and is an Allergan Botox Platinum Provider.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>What does it cost, and can I spread it out?</summary>
+        <div class="ans">
+          <p>Cost depends on the area and the amount, so it is quoted at your complimentary consultation rather than off a menu. Alle payment plans can spread a plan over time; ask, and the options will be walked through with you.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Does it hurt?</summary>
+        <div class="ans">
+          <p>Comfort options are part of the consultation. What it feels like differs by person and by area, so your nurse tells you plainly what to expect in the area you are considering.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How long does it last, and what happens when it wears off?</summary>
+        <div class="ans">
+          <p>Filler is not permanent, and it fades gradually. How long a result holds varies by product, area, and person, so your nurse gives you a realistic range for your specific plan. What comes next is decided the way the first visit was: one area, looked at first.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>I am not sure whether I need filler or Botox.</summary>
+        <div class="ans">
+          <p>That is the most common question in the room, and it is decided at your complimentary consultation by a licensed provider who looks first. Relaxers soften the lines expression makes, and filler restores volume, and a good number of faces need one and not the other. If you would like to read about the other half first, the <a href="../tox/">Botox and Dysport page is here</a>.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Where are you, and when are you open?</summary>
+        <div class="ans">
+          <p>426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX 75156, on Cedar Creek Lake. Monday to Friday, 8:30 AM to 6:00 PM. Saturday, 9:00 AM to 5:00 PM. Closed Sunday. To reach a person, call <a href="tel:+19038025130">(903) 802-5130</a>.</p>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 12 · BOOK ============================ -->
+<section class="sect" id="book">
+  <div class="wrap book">
+    <div class="book-aside">
+      <p class="kick">Book</p>
+      <h2>Start with one area.</h2>
+      <p class="lede">Tell us what you have been noticing, and a licensed nurse looks first, then says plainly what is worth doing, if anything. The finish line: you, just better, and nobody able to say why.</p>
+      <ul class="book-facts">
+        <li>The consultation is complimentary, every time, with no obligation to schedule anything.</li>
+        <li>About thirty minutes. You leave knowing what it would involve and what it would cost.</li>
+        <li>Prefer to talk to a person now, call <a href="tel:+19038025130">(903) 802-5130</a>.</li>
+        <li>Monday to Friday, 8:30 AM to 6:00 PM · Saturday, 9:00 AM to 5:00 PM · Closed Sunday.</li>
+      </ul>
+    </div>
+
+    <!-- [PRE-LAUNCH · C1] HONESTLY UNWIRED FORM.
+         action="#" and the handler below states plainly that the form is not connected.
+         Wire a real endpoint and delete the unwired branch before launch. -->
+    <div class="form-card">
+      <!-- F1 · PHI. This note leads the form. It must stay ABOVE the fields, because
+           the optional textarea below invites a visitor to describe what they have
+           noticed, and the instruction has to be read before the field is reached. -->
+      <p class="form-note">Contact details only. No medical information is needed here, and please do not include any. Someone from the studio follows up to find a time that works.</p>
+      <form id="consult-form" action="#" method="post" novalidate>
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="f-area">Area you are considering</label>
+          <select id="f-area" name="area">
+            <option value="lips">Lips</option>
+            <option value="cheeks">Cheeks</option>
+            <option value="under-eyes">Under the eyes</option>
+            <option value="smile-marionette">Smile and marionette lines</option>
+            <option value="chin-jaw">Chin and jawline</option>
+            <option value="unsure" selected>Not sure yet, that is fine</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-note">What you would like to talk about (optional)</label>
+          <!-- F1 · the placeholder repeats the no-medical-information instruction at the
+               point of entry. Do not remove it, and do not remove the note above. -->
+          <textarea id="f-note" name="note" rows="3" placeholder="No medical details needed, just what you would like to talk about"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Book a complimentary consult</button>
+        <p class="consent">By sending this you agree to be contacted about a consultation. Standard message and data rates may apply. This page is advertising, not medical advice.</p>
+      </form>
+      <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
+      <noscript>
+        <div class="form-status">This form needs JavaScript to send. Call <a href="tel:+19038025130">(903) 802-5130</a> and the studio will book your complimentary consultation over the phone.</div>
+      </noscript>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ 13 · FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-cols">
+      <div>
+        <h3>Cedar Creek Cosmo</h3>
+        <address>
+          426 S. Gun Barrel City Lane, Suite B<br>
+          Gun Barrel City, TX 75156<br>
+          <a href="tel:+19038025130">(903) 802-5130</a>
+        </address>
+      </div>
+      <div>
+        <h3>Hours</h3>
+        <address>
+          Monday to Friday, 8:30 AM to 6:00 PM<br>
+          Saturday, 9:00 AM to 5:00 PM<br>
+          Closed Sunday
+        </address>
+      </div>
+      <div>
+        <h3>More</h3>
+        <p style="margin-bottom:14px"><a class="foot-cta" href="#book">Book a complimentary consult</a></p>
+        <!-- [PRE-LAUNCH · C2] real URLs required before this page collects any PII -->
+        <ul class="foot-links">
+          <li><a href="../tox/">Botox and Dysport</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">HIPAA Notice</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="legal">
+      <p>This page is advertising, not medical advice. The information on it is for general educational purposes.</p>
+      <p>Juvederm fillers are prescription treatments, and all treatments are available only after a consultation and evaluation by a licensed provider, and only if appropriate for you.</p>
+      <p>Individual results vary and are not guaranteed.</p>
+      <p>This page does not create a patient-provider relationship. If you are experiencing a medical emergency, call 911.</p>
+      <!-- CONDITIONAL LINE · include ONLY if a review quote ships after the reviewer-name
+           collision check clears. Default is omitted, and it is omitted here:
+           "Review excerpts are verbatim from verified Google reviews of Cedar Creek Cosmo,
+           rated 5.0 across 34 reviews; individual experiences vary." -->
+      <p>Botox and Juvederm are registered trademarks of Allergan Aesthetics, an AbbVie company. Dysport is a registered trademark of Ipsen. Alle is Allergan's rewards program.</p>
+      <p class="copyright">&copy; 2026 Cedar Creek Cosmo. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ STICKY MOBILE BAR ============================ -->
+<div class="sticky" id="sticky-bar">
+  <!-- F2b · the number is nowrap so the label breaks as "Call" / "(903) 802-5130"
+       and never mid-number at 390px. The Book label is a locked string.
+       The outer <span> matters: .btn is inline-flex, and flex layout DISCARDS the
+       whitespace between two flex items, which ate the space in "Call (903)".
+       One span keeps the whole label as a single flex item. Do not unwrap it. -->
+  <a class="btn btn-secondary" href="tel:+19038025130"><span>Call <span class="nowrap">(903)&nbsp;802-5130</span></span></a>
+  <a class="btn btn-primary" href="#book">Book a complimentary consult</a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---- The Measure: hairlines draw to 62% and stop at a dot ---- */
+  var rows = document.querySelectorAll('#measure-list .m-row');
+  if (reduce || !('IntersectionObserver' in window)) {
+    // Reduced motion / no observer: final state, drawn at rest. No animation runs.
+    Array.prototype.forEach.call(rows, function (r) { r.classList.add('drawn'); });
+  } else {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var i = Array.prototype.indexOf.call(rows, e.target);
+        var delay = Math.max(0, i) * 90;
+        window.setTimeout(function () { e.target.classList.add('drawn'); }, delay);
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.35, rootMargin: '0px 0px -8% 0px' });
+    Array.prototype.forEach.call(rows, function (r) { obs.observe(r); });
+  }
+
+  /* ---- Sticky bar appears once the hero has cleared the viewport ---- */
+  var bar = document.getElementById('sticky-bar');
+  var sentinel = document.getElementById('hero-end');
+  if (bar && sentinel) {
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        bar.classList.toggle('on', !entries[0].isIntersecting && entries[0].boundingClientRect.top < 0);
+      }, { threshold: 0 }).observe(sentinel);
+    } else {
+      bar.classList.add('on');
+    }
+  }
+
+  /* ---- Consult form: honestly unwired.
+         There is no endpoint behind this yet, so it never pretends to send. ---- */
+  var form = document.getElementById('consult-form');
+  var status = document.getElementById('form-status');
+  if (form && status) {
+    form.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      status.hidden = false;
+      status.innerHTML = 'This form is not connected yet, so nothing was sent. ' +
+        'Call <a href="tel:+19038025130">(903) 802-5130</a> and the studio will book your ' +
+        'complimentary consultation over the phone.';
+      status.setAttribute('tabindex', '-1');
+      status.focus({ preventScroll: false });
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
