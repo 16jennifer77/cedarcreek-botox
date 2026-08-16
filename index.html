@@ -702,6 +702,9 @@
     .form-col{display:grid;gap:1.1rem}
     /* the prefer-to-talk line sits under the form in its own grid row, so the offer copy centers on the form box itself (Jennifer 2026-08-16) */
     @media (min-width:920px){.offer .form-alt{grid-column:2}}
+    /* pull the line up under the form: cancel the grid row gap, leave ~1rem of air */
+    .offer .form-alt{margin-top:calc(1rem - clamp(2.6rem,5vw,4rem))}
+    @media (max-width:719px){.offer .form-alt{margin-top:calc(1rem - 2.2rem)}}
     .form-alt{font-size:.88rem;color:var(--ink-2);line-height:1.7;text-align:center}
     .form-alt a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair)}
     .form-alt a:hover{color:var(--vio-soft);border-color:var(--vio)}
@@ -1125,7 +1128,7 @@
             <!-- SWAP: submit note. PLACEHOLDER: the form is not wired; this note only stands in for the GHL response until wiring. -->
             <p id="done" role="status" hidden>Received. A member of our team will confirm your consultation and answer any questions. Nothing is booked or charged until you say so.</p>
           </div>
-          <p class="form-alt reveal">Prefer to talk? <a href="tel:+19038025130">(903) 802-5130</a> <span class="sep" aria-hidden="true">&middot;</span> <a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX</a></p>
+          <p class="form-alt reveal">Prefer to talk? <a href="tel:+19038025130">(903) 802-5130</a> <span class="sep" aria-hidden="true">&middot;</span> <a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, <span class="nw">Gun Barrel City, TX</span></a></p>
         </div>
       </div>
     </section>
