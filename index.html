@@ -55,7 +55,7 @@
   four chips) > stat band > is this you (4) > where filler can help (drawing + 4 rows) > what to
   expect (6 + CTA) > offer block on the lit ground (real team photo) > trust
   band (5 pairs) > the essay (one prose block, founders photo) > reviews (featured five, verbatim,
-  no Stephanie-named reviewers) > closing CTA + form (full name / phone / email / consult type)
+  no Stephanie-named reviewers) > closing CTA + form (first + last name / phone / email / consult type)
   > FAQ (kept below the form, Jennifer 2026-08-15) > footer. Hero is a still (film reverted the same
   day). Divergences from google-ads-lp-cro.md remain deliberate: no sticky call bar on phones (a
   Book consult button sits in the header beside the brand instead), FAQ closed and below the form. Previous cut saved beside this file as
@@ -771,9 +771,9 @@
   11. Trust band: 5 pairs (rating, nurse practitioner-led, natural, licensed injectors, on the lake)
   12. The essay: founders photo + head (Tutera receipt 3) + ~78 word prose block + address card
   13. Reviews: featured quote panel (Amber Swanson) + 4 verbatim Google cards (full text) + disclaimer (claim source comment above)
-  14. Closing CTA + form: heading (Tutera lineage), intro, location line, lead form (full name / phone / email / consult type; unwired), microcopy, prefer-to-talk line, placeholder submit note
+  14. Closing CTA + form: heading (Tutera lineage), intro, location line, lead form (first name / last name / phone / email / consult type; unwired), microcopy, prefer-to-talk line, placeholder submit note
   15. FAQ (centered, below the form): 6 question and answer pairs, all closed until opened
-  16. Footer: blurb, address (Google listing link), contact, hours, copyright + privacy policy link, disclaimers, imagery honesty note
+  16. Footer: blurb, address (Google listing link), contact, hours, copyright + privacy policy link, disclaimers (the AI-imagery honesty sentence was removed on Jennifer's instruction, 2026-08-16)
 ============================================================ -->
 <!-- Claim source: Cedar Creek Cosmo rated 5.0 across 36 Google reviews (Google Business listing, placeid ChIJP_MInecjSYYR_1JDZIE0byI), re-verified 2026-08-16 by reading the live listing (36 reviews, 5.0). Review quotes below are verbatim from the listing (Amber Swanson, Tonja Siegfried, Jessica Landes, Brooklynn Shelton, Bridget Mcmullen). Both Stephanie-named reviewers stay off the page (staff-name collision rule). Update the count when re-verified. -->
   <a class="skip" href="#main">Skip to main content</a>
@@ -1083,11 +1083,17 @@
             </figure>
           </div>
           <div class="form-col">
-            <!-- SWAP: consultation form (locked contract, same as Tutera: full name, phone, email, consult type). Ships UNWIRED (action="#"); the GHL relay (server-side name split into firstName/lastName, upsert, GET-verify, greeting_name fallback, dedupe-preference check for this subaccount) lives in the Tutera doc, Calls-2, and applies identically here. -->
+            <!-- SWAP: consultation form (first name, last name, phone, email, consult type; Jennifer 2026-08-16 split the name into two fields). Ships UNWIRED (action="#"); the GHL relay (upsert, GET-verify, greeting_name fallback, dedupe-preference check for this subaccount) lives in the Tutera doc, Calls-2, and applies identically here. -->
             <form id="lead" action="#" novalidate>
-              <div class="field">
-                <label for="name">Full name</label>
-                <input id="name" name="full_name" type="text" autocomplete="name" placeholder="Full name" required>
+              <div class="frow">
+                <div class="field">
+                  <label for="fn">First name</label>
+                  <input id="fn" name="first_name" type="text" autocomplete="given-name" placeholder="First name" required>
+                </div>
+                <div class="field">
+                  <label for="ln">Last name</label>
+                  <input id="ln" name="last_name" type="text" autocomplete="family-name" placeholder="Last name" required>
+                </div>
               </div>
               <div class="frow">
                 <div class="field">
@@ -1203,7 +1209,7 @@
         <!-- SWAP: copyright + medical disclaimer + review source + imagery honesty note -->
         <p>&copy; <span id="year">2026</span> Cedar Creek Cosmo. All rights reserved. <span class="sep" aria-hidden="true">|</span> <a class="maplink" href="https://www.cedarcreekcosmo.com/general-4" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
         <p>This page is advertising, not medical advice. The information on it is for general educational purposes. Aesthetic injectable treatments are available only after a consultation and evaluation by a licensed provider, and only if appropriate for you. Individual results vary and are not guaranteed. This page does not create a patient-provider relationship. If you are experiencing a medical emergency, call 911.</p>
-        <p>Review excerpts are verbatim from verified Google reviews of Cedar Creek Cosmo, rated 5.0 across 36 reviews; individual experiences vary. Styled treatment and consultation imagery on this page uses AI modelled people, not our patients or staff; the team and founder photographs are the studio's own.</p>
+        <p>Review excerpts are verbatim from verified Google reviews of Cedar Creek Cosmo, rated 5.0 across 36 reviews; individual experiences vary.</p>
       </div>
     </div>
   </footer>
