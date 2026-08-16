@@ -556,8 +556,14 @@
       .btn{letter-spacing:.1em;padding-inline:1.1rem;font-size:.72rem}
       .price-line{gap:.35rem .7rem}
     }
-    /* v17: why grid = plates, three across on wide screens */
-    @media (min-width:1020px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+    /* v17: why pillars. No boxes: a gold rule, a short display line, one sentence */
+    .pillars{display:grid;gap:2.2rem 2.4rem}
+    @media (min-width:640px){.pillars{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1020px){.pillars{grid-template-columns:repeat(4,1fr);gap:2.6rem}}
+    .pillar{border-top:1px solid var(--vio);padding-top:1.3rem}
+    .pillar .pl{display:block;font-size:.64rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--faint);margin-bottom:.9rem}
+    .pillar h3{font-size:clamp(1.35rem,1.7vw,1.6rem);line-height:1.22;margin-bottom:.7rem}
+    .pillar p{color:var(--muted);font-size:.92rem;line-height:1.6;max-width:30ch}
     /* v17: FAQ section centered on the page */
     .faq-sec .sec-head{text-align:center;margin-inline:auto}
     .faq-sec .faq{margin-inline:auto}
@@ -604,7 +610,7 @@
   04. Hero film slot (data-film, desktop only) + still (webp, preloaded) + kicker, headline (locked), subhead (locked), CTAs, evaluation note
   05. Credentials strip: 4 trust marks
   06. Sound familiar: pain lede + 2 promise rows + consult figure (nurse and patient)
-  07. Why Cedar Creek Cosmo: 4 differentiator plates
+  07. Why Cedar Creek Cosmo: 4 pillars (label, display line, one sentence)
   08. What you get (the map): two-family lede + profile drawing + 6 area ledger rows + fine print
   10. The visit: consult figure (still + desktop film via data-film) + 4 numbered plates
   11. FAQ (centered): 6 question and answer pairs, all closed until opened
@@ -716,40 +722,36 @@
       </div>
     </section>
 
-    <!-- ============ 3 · WHY CEDAR CREEK COSMO: what sets the studio apart ============ -->
+    <!-- ============ 3 · WHY CEDAR CREEK COSMO: four pillars ============ -->
     <section class="sec wrap" id="why">
       <div class="sec-head">
         <!-- SWAP: why kicker + heading + lede -->
         <p class="kicker reveal">Why Cedar Creek Cosmo</p>
         <h2 class="reveal" style="--d:.06s">What sets the <span class="nw">studio apart.</span></h2>
-        <p class="lead reveal" style="--d:.12s">Injectables are popular, and a lot of places will sell them to you. Here is what is different about having them done here.</p>
+        <p class="lead reveal" style="--d:.12s">A lot of places will sell you injectables. Four things are different here.</p>
       </div>
-      <!-- SWAP: 4 differentiator plates (number, label, heading, copy) -->
-      <div class="plates why-grid reveal">
-        <article class="plate">
-          <span class="pn" aria-hidden="true">01</span>
+      <!-- SWAP: 4 pillars (label, headline, one line) -->
+      <div class="pillars">
+        <div class="pillar reveal">
           <span class="pl">The plan</span>
-          <h3>Your face, read first</h3>
-          <p>Every plan starts with a complimentary consultation and a look at your face: how it moves, where the lines live, what should stay. No picking units off a menu.</p>
-        </article>
-        <article class="plate">
-          <span class="pn" aria-hidden="true">02</span>
+          <h3>Read first, <span class="nw">never a menu.</span></h3>
+          <p>A complimentary consult and a look at your face before anything is decided.</p>
+        </div>
+        <div class="pillar reveal" style="--d:.07s">
           <span class="pl">The injector</span>
-          <h3>Nurses who know your face</h3>
-          <p>Christyl, Kelsey, and Stephanie are registered nurses who know your face and plan to see you again. Not whoever happens to be available that day.</p>
-        </article>
-        <article class="plate">
-          <span class="pn" aria-hidden="true">03</span>
+          <h3>Nurses who <span class="nw">know you.</span></h3>
+          <p>Christyl, Kelsey, and Stephanie, RNs. Never whoever happens to be on shift.</p>
+        </div>
+        <div class="pillar reveal" style="--d:.14s">
           <span class="pl">The sell</span>
-          <h3>The default is less</h3>
-          <p>A conservative plan, built gradually, for a natural look that is never overdone. Any costs are explained before anything is placed, and if the honest answer is to wait, you will hear it.</p>
-        </article>
-        <article class="plate">
-          <span class="pn" aria-hidden="true">04</span>
+          <h3>Less, <span class="nw">by default.</span></h3>
+          <p>Conservative and gradual, never overdone. Costs explained before anything is placed.</p>
+        </div>
+        <div class="pillar reveal" style="--d:.21s">
           <span class="pl">The drive</span>
-          <h3>Right here on the lake</h3>
-          <p>Gun Barrel City, on Cedar Creek Lake, with lake hours and a team that follows up like a neighbor. No drive to Dallas or Tyler and back.</p>
-        </article>
+          <h3>Right here <span class="nw">on the lake.</span></h3>
+          <p>Gun Barrel City, with lake hours. No drive to Dallas or Tyler and back.</p>
+        </div>
       </div>
     </section>
 
