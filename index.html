@@ -101,7 +101,7 @@
       --grade:grayscale(.25) sepia(.12) brightness(.88) contrast(1.05);
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{-webkit-text-size-adjust:100%;scroll-padding-top:5rem}
+    html{-webkit-text-size-adjust:100%;scroll-padding-top:0}
     html,body{overflow-x:clip}
     body{
       font-family:var(--body);font-weight:400;font-size:1rem;line-height:1.68;
@@ -112,7 +112,9 @@
     a{color:inherit}
     ::selection{background:var(--vio);color:var(--noir)}
     :focus-visible{outline:2px solid var(--vio);outline-offset:3px}
-    section[id]{scroll-margin-top:76px}
+    /* v18.10 (Jennifer 2026-08-16): anchors land with the heading just under the header, not under the section's top padding */
+    section[id]{scroll-margin-top:calc(76px - clamp(4.75rem,9.5vw,7.75rem) + 1.25rem)}
+    .hero[id]{scroll-margin-top:0}
     body.no-scroll{overflow:hidden}
 
     /* ---------- primitives ---------- */
@@ -589,7 +591,6 @@
     form .form-note{margin-top:.9rem}
     form{padding-bottom:calc(clamp(1.6rem,3vw,2.4rem) + .5rem)}
     /* v17: "Book" anchors land on the form itself, not on the section's top padding */
-    @media (min-width:960px){#reserve{scroll-margin-top:calc(76px - clamp(4.75rem,9.5vw,7.75rem) + 1.5rem)}}
     /* v17: footer is three columns (House column removed); privacy link sits on the copyright line */
     @media (min-width:820px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
     .foot-bottom .sep{margin-inline:.35rem;color:var(--hair)}
@@ -622,12 +623,11 @@
       .nav-in{padding-inline:12px;width:100%}
       /* the header is now 132px tall on phones: push the hero and anchor targets down to match */
       .hero-in{padding-top:calc(132px + 1.25rem)}
-      section[id]{scroll-margin-top:132px}
-      #reserve{scroll-margin-top:calc(132px - clamp(4.75rem,9.5vw,7.75rem) + 1.5rem)}
+      section[id]{scroll-margin-top:calc(132px - clamp(4.75rem,9.5vw,7.75rem) + 1.25rem)}
     }
     @media (max-width:719px){
       .hero-in{padding-top:calc(132px + 1rem)}
-      #reserve{scroll-margin-top:calc(132px - 1.75rem + 1rem)}
+      section[id]{scroll-margin-top:calc(132px - 1.75rem + 1rem)}
     }
 
     /* ---------- v18: eleven-section fused spine (2026-08-16) ---------- */
