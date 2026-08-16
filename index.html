@@ -597,6 +597,12 @@
     @media (min-width:820px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
     .foot-bottom .sep{margin-inline:.35rem;color:var(--hair)}
     .foot-bottom .maplink{color:var(--ink-2)}
+    /* phones: footer brand block centered (mark, name, blurb), Jennifer 2026-08-16 */
+    @media (max-width:719px){
+      .foot-brand{text-align:center}
+      .foot-brand .brand{justify-content:center}
+      .foot-brand p{margin-inline:auto}
+    }
     /* v17: the map's two family panels (replace the eight-row ledger) */
     .fams{display:grid;gap:1.1rem;align-self:center}
     .fam{border:1px solid var(--hair);background:var(--noir);padding:clamp(1.6rem,2.6vw,2.2rem)}
