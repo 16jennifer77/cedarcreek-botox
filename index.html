@@ -115,6 +115,8 @@
     /* v18.10 (Jennifer 2026-08-16): anchors land with the heading just under the header, not under the section's top padding */
     section[id]{scroll-margin-top:calc(76px - clamp(4.75rem,9.5vw,7.75rem) + 1.25rem)}
     .hero[id]{scroll-margin-top:0}
+    /* Book links target the form itself (#lead), so phones land on the fields, not the copy above them (Jennifer 2026-08-16) */
+    #lead{scroll-margin-top:calc(76px + 1.25rem)}
     body.no-scroll{overflow:hidden}
 
     /* ---------- primitives ---------- */
@@ -787,7 +789,7 @@
       </nav>
       <!-- SWAP: nav CTA -->
       <!-- SWAP: nav CTA (phones show the short label beside the brand; no Call / Book bar, Jennifer 2026-08-16) -->
-      <a class="btn nav-cta" href="#reserve"><span class="lg">Complimentary consult</span><span class="sm">Book consult</span></a>
+      <a class="btn nav-cta" href="#lead"><span class="lg">Complimentary consult</span><span class="sm">Book consult</span></a>
     </div>
   </header>
 
@@ -807,7 +809,7 @@
         <p class="hero-sub reveal" style="--d:.12s">Dermal filler, planned to your face, at our Gun Barrel <span class="nw">City studio.</span></p>
         <div class="hero-cta reveal" style="--d:.18s">
           <!-- SWAP: hero CTA labels + hrefs -->
-          <a class="btn" href="#reserve">Book your consultation
+          <a class="btn" href="#lead">Book your consultation
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a class="btn btn-ghost" href="tel:+19038025130">Call (903) 802-5130</a>
@@ -934,7 +936,7 @@
             <li><b>Refined over time</b><span>at a pace that suits you</span></li>
           </ul>
           <div class="hero-cta reveal" style="--d:.18s">
-            <a class="btn" href="#reserve">Book your consultation
+            <a class="btn" href="#lead">Book your consultation
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
           </div>
@@ -963,7 +965,7 @@
           </ul>
           <p class="promise reveal" style="--d:.22s">No pressure. No obligation. No surprises.</p>
           <div class="hero-cta reveal" style="--d:.26s">
-            <a class="btn" href="#reserve">Book your consultation
+            <a class="btn" href="#lead">Book your consultation
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
             <a class="btn btn-ghost" href="tel:+19038025130">Call (903) 802-5130</a>
@@ -1074,7 +1076,7 @@
               <div class="media"><img src="cedar-creek-assets/lake-cta.webp" width="1200" height="675" alt="Golden hour over Cedar Creek Lake, still water and a line of trees" loading="lazy" decoding="async"></div>
             </figure>
           </div>
-          <div class="form-col reveal" style="--d:.1s">
+          <div class="form-col">
             <!-- SWAP: consultation form (locked contract, same as Tutera: full name, phone, email, consult type). Ships UNWIRED (action="#"); the GHL relay (server-side name split into firstName/lastName, upsert, GET-verify, greeting_name fallback, dedupe-preference check for this subaccount) lives in the Tutera doc, Calls-2, and applies identically here. -->
             <form id="lead" action="#" novalidate>
               <div class="field">
