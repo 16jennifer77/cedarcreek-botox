@@ -700,11 +700,13 @@
     .grev-four .grev-card blockquote{display:block;-webkit-line-clamp:unset;overflow:visible}
     /* closing form column */
     .form-col{display:grid;gap:1.1rem}
+    /* the prefer-to-talk line sits under the form in its own grid row, so the offer copy centers on the form box itself (Jennifer 2026-08-16) */
+    @media (min-width:920px){.offer .form-alt{grid-column:2}}
     .form-alt{font-size:.88rem;color:var(--ink-2);line-height:1.7;text-align:center}
     .form-alt a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair)}
     .form-alt a:hover{color:var(--vio-soft);border-color:var(--vio)}
-    .form-alt .sep{margin-inline:.4rem;color:var(--faint)}
-    @media (min-width:720px){.form-alt a{white-space:nowrap}}
+    .form-alt .sep{display:none}
+    .form-alt .maplink{display:table;margin:.15rem auto 0}
     @media (max-width:639px){.grev-four{grid-auto-rows:auto}}
 
     @media (prefers-reduced-motion:reduce){
@@ -1122,8 +1124,8 @@
             </form>
             <!-- SWAP: submit note. PLACEHOLDER: the form is not wired; this note only stands in for the GHL response until wiring. -->
             <p id="done" role="status" hidden>Received. A member of our team will confirm your consultation and answer any questions. Nothing is booked or charged until you say so.</p>
-            <p class="form-alt">Prefer to talk? <a href="tel:+19038025130">(903) 802-5130</a> <span class="sep" aria-hidden="true">&middot;</span> <a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX</a></p>
           </div>
+          <p class="form-alt reveal">Prefer to talk? <a href="tel:+19038025130">(903) 802-5130</a> <span class="sep" aria-hidden="true">&middot;</span> <a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX</a></p>
         </div>
       </div>
     </section>
