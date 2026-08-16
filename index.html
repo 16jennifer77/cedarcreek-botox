@@ -531,6 +531,8 @@
     .trust .principle .pm{color:var(--vio)}
     .trust .principle p{color:var(--muted)}
     .trust .practice-fig figcaption{color:var(--faint)}
+    .trust .practice-fig .media{aspect-ratio:1/1}
+    .trust .practice-fig .media>img{object-position:60% 55%}
     .team-fig{margin:0 0 clamp(2.4rem,4.5vw,3.5rem)}
     .team-fig .media{aspect-ratio:3/2;border:1px solid var(--hair)}
     .team-fig .media>img{object-position:50% 18%}
@@ -555,7 +557,7 @@
       .price-line{gap:.35rem .7rem}
     }
     /* v17: why grid = plates, three across on wide screens */
-    @media (min-width:1020px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+    @media (min-width:1020px){.why-grid{grid-template-columns:repeat(4,1fr)}}
     /* v17: FAQ section centered on the page */
     .faq-sec .sec-head{text-align:center;margin-inline:auto}
     .faq-sec .faq{margin-inline:auto}
@@ -601,14 +603,13 @@
   03. Nav brand, links, CTA (and the mobile sheet mirror of both)
   04. Hero film slot (data-film, desktop only) + still (webp, preloaded) + kicker, headline (locked), subhead (locked), CTAs, evaluation note
   05. Credentials strip: 4 trust marks
-  06. Sound familiar: pain lede + 3 promise rows + consult figure (nurse and patient)
-  07. Why Cedar Creek Cosmo: 6 differentiator plates
-  08. Two ways to refresh: 3 rail plates (family, copy, spec rows) + footnote
-  09. Treatment map: side copy + profile drawing + 8 area ledger rows + fine print
+  06. Sound familiar: pain lede + 2 promise rows + consult figure (nurse and patient)
+  07. Why Cedar Creek Cosmo: 4 differentiator plates
+  08. What you get (the map): two-family lede + profile drawing + 6 area ledger rows + fine print
   10. The visit: consult figure (still + desktop film via data-film) + 4 numbered plates
   11. FAQ (centered): 6 question and answer pairs, all closed until opened
   13. Reviews: featured quote panel + 8 verbatim Google cards (6 shown, 2 behind Show more) + disclaimer (claim source comment above)
-  15. The studio: real team photo + founders photo + 4 trust rows + address card
+  15. The studio: real team photo + founders photo + 2 trust rows + address card
   16. CTA: heading, intro, consult line, lead form (unwired), placeholder submit note
   17. Footer: blurb, address (Google listing link), contact, hours, copyright + privacy policy link, disclaimers, imagery honesty note
   18. Sticky mobile call bar: phone + book anchor
@@ -626,8 +627,7 @@
       <nav aria-label="Primary">
         <!-- SWAP: nav links -->
         <ul class="nav-links">
-          <li><a href="#treatments">The treatments</a></li>
-          <li><a href="#areas">The map</a></li>
+          <li><a href="#areas">The treatments</a></li>
           <li><a href="#visit">The visit</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -643,8 +643,7 @@
       <nav aria-label="Mobile">
         <!-- SWAP: mobile sheet links (mirror the nav links) -->
         <ul>
-          <li><a href="#treatments">The treatments</a></li>
-          <li><a href="#areas">The map</a></li>
+          <li><a href="#areas">The treatments</a></li>
           <li><a href="#visit">The visit</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -703,10 +702,9 @@
           <!-- SWAP: pain kicker, heading, lede, 3 promise rows -->
           <p class="kicker reveal">Sound familiar?</p>
           <h2 class="reveal" style="--d:.06s">Quiet hands, <span class="nw">small doses.</span></h2>
-          <p class="lead reveal" style="--d:.12s">First time with injectables, or burned by an overdone result somewhere else? Overdone is a judgment problem, not a product problem. The same treatments can look obvious or look like nothing at all. What changes the result is the eye behind the needle, and a willingness to add as little as possible.</p>
+          <p class="lead reveal" style="--d:.12s">First time with injectables, or burned by an overdone result somewhere else? Overdone is a judgment problem, not a product problem. What changes the result is the eye behind the needle, and a willingness to add as little as possible.</p>
           <ul class="rlist reveal" style="--d:.18s">
             <li>A real look. Your provider studies your face and plans placement to suit your features, not a one-size template.</li>
-            <li>A light touch. Conservative by default and built gradually, so you look refreshed rather than worked on. Results vary.</li>
             <li>A straight answer. If the honest call is less, or nothing at all, that is what you will hear.</li>
           </ul>
         </div>
@@ -726,93 +724,33 @@
         <h2 class="reveal" style="--d:.06s">What sets the <span class="nw">studio apart.</span></h2>
         <p class="lead reveal" style="--d:.12s">Injectables are popular, and a lot of places will sell them to you. Here is what is different about having them done here.</p>
       </div>
-      <!-- SWAP: 6 differentiator plates (number, label, heading, copy) -->
+      <!-- SWAP: 4 differentiator plates (number, label, heading, copy) -->
       <div class="plates why-grid reveal">
         <article class="plate">
           <span class="pn" aria-hidden="true">01</span>
           <span class="pl">The plan</span>
           <h3>Your face, read first</h3>
-          <p>Every plan starts with a complimentary consultation and a look at your face: how it moves, where the lines live, what should stay. Nobody picks a number of units off a menu here.</p>
+          <p>Every plan starts with a complimentary consultation and a look at your face: how it moves, where the lines live, what should stay. No picking units off a menu.</p>
         </article>
         <article class="plate">
           <span class="pn" aria-hidden="true">02</span>
           <span class="pl">The injector</span>
-          <h3>Licensed nurses, every visit</h3>
+          <h3>Nurses who know your face</h3>
           <p>Christyl, Kelsey, and Stephanie are registered nurses who know your face and plan to see you again. Not whoever happens to be available that day.</p>
         </article>
         <article class="plate">
           <span class="pn" aria-hidden="true">03</span>
           <span class="pl">The sell</span>
           <h3>The default is less</h3>
-          <p>A conservative plan, built gradually, for a natural look that is never overdone. If the honest answer is to wait, or to do nothing at all, that is what you will hear.</p>
+          <p>A conservative plan, built gradually, for a natural look that is never overdone. Any costs are explained before anything is placed, and if the honest answer is to wait, you will hear it.</p>
         </article>
         <article class="plate">
           <span class="pn" aria-hidden="true">04</span>
-          <span class="pl">The money</span>
-          <h3>Costs, before anything is placed</h3>
-          <p>Because the right plan depends on the treatment, your provider goes over any costs plainly with you before anything is decided. No surprises, and no obligation.</p>
-        </article>
-        <article class="plate">
-          <span class="pn" aria-hidden="true">05</span>
           <span class="pl">The drive</span>
           <h3>Right here on the lake</h3>
-          <p>Gun Barrel City, on Cedar Creek Lake, with lake hours and a team that follows up like a neighbor, because it is one. No drive to Dallas or Tyler and back.</p>
-        </article>
-        <article class="plate">
-          <span class="pn" aria-hidden="true">06</span>
-          <span class="pl">The proof</span>
-          <h3>Rated 5.0 by people right here</h3>
-          <p>5.0 across 34 Google reviews from people on the lake, and a real studio since 2020, not a pop-up passing through. Read them below, verbatim.</p>
+          <p>Gun Barrel City, on Cedar Creek Lake, with lake hours and a team that follows up like a neighbor. No drive to Dallas or Tyler and back.</p>
         </article>
       </div>
-    </section>
-
-    <!-- ============ 4a · TWO WAYS TO REFRESH: what exactly do I get? (rail) ============ -->
-    <section class="sec wrap" id="treatments">
-      <div class="sec-head">
-        <!-- SWAP: treatments kicker + heading + lede -->
-        <p class="kicker reveal">What you get</p>
-        <h2 class="reveal" style="--d:.06s">Two ways <span class="nw">to refresh.</span></h2>
-        <p class="lead reveal" style="--d:.12s">Facial injections here fall into two families, both placed by licensed nurses. Which is right for you, if either, is decided together at your complimentary consultation.</p>
-      </div>
-      <!-- SWAP: 3 treatment plates (name, family, copy, spec rows) -->
-      <div class="rail reveal" role="list">
-        <article class="fplate" role="listitem">
-          <p class="no" aria-hidden="true">01</p>
-          <h3>Wrinkle-relaxing injections</h3>
-          <p class="gen">Family one &middot; expression lines</p>
-          <p class="desc">Prescription injections that relax the small muscles that crease the skin, softening the look of frown lines, forehead lines, and lines around the eyes. Softened, not switched off, so expression survives.</p>
-          <dl>
-            <div><dt>Softens</dt><dd>Frown, forehead, eyes</dd></div>
-            <div><dt>Placed by</dt><dd>Licensed nurses</dd></div>
-            <div><dt>Character</dt><dd>A soft, even finish</dd></div>
-          </dl>
-        </article>
-        <article class="fplate" role="listitem">
-          <p class="no" aria-hidden="true">02</p>
-          <h3>Dermal filler</h3>
-          <p class="gen">Family two &middot; volume and folds</p>
-          <p class="desc">Hyaluronic acid gel, a sugar your skin already makes, used to restore subtle volume and smooth the look of folds, in areas like the cheeks, the lips, and the lines that frame the mouth.</p>
-          <dl>
-            <div><dt>Restores</dt><dd>Cheeks, lips, folds</dd></div>
-            <div><dt>Also for</dt><dd>Under eyes, chin, jaw</dd></div>
-            <div><dt>Made from</dt><dd>Hyaluronic acid</dd></div>
-          </dl>
-        </article>
-        <article class="fplate" role="listitem">
-          <p class="no" aria-hidden="true">03</p>
-          <h3>A plan, not a menu</h3>
-          <p class="gen">Both families &middot; your consultation</p>
-          <p class="desc">Which family fits, if either, and where and how little, is decided together at your complimentary consultation. Placement is mapped to your face and added gradually, so the result stays balanced and natural.</p>
-          <dl>
-            <div><dt>Starts with</dt><dd>A complimentary consult</dd></div>
-            <div><dt>Costs</dt><dd>Explained up front</dd></div>
-            <div><dt>If the answer is wait</dt><dd>We say so</dd></div>
-          </dl>
-        </article>
-      </div>
-      <!-- SWAP: treatments footnote -->
-      <p class="rail-note reveal">Wrinkle-relaxing injections are prescription treatments. What fits your face, if anything, and what it costs is talked through plainly at your complimentary consultation. No menus, no pressure, and no surprises.</p>
     </section>
 
     <!-- ============ 4b · TREATMENT MAP (signature: sticky side + area ledger) ============ -->
@@ -820,9 +758,9 @@
       <div class="wrap map-grid">
         <div class="map-side">
           <!-- SWAP: treatment map kicker, heading, copy -->
-          <p class="kicker reveal">The map</p>
-          <h2 class="reveal" style="--d:.06s">Planned to your face, <span class="nw">not a template.</span></h2>
-          <p class="lead reveal" style="--d:.12s">Your provider studies your face first: how it moves, where the lines live, what should soften, and what should stay. Placement is planned to suit your features and added gradually, so the result stays balanced and natural.</p>
+          <p class="kicker reveal">What you get</p>
+          <h2 class="reveal" style="--d:.06s">Two ways <span class="nw">to refresh.</span></h2>
+          <p class="lead reveal" style="--d:.12s">Facial injections here fall into two families: wrinkle-relaxing injections that soften expression lines, and dermal filler that restores subtle volume and smooths folds. Both are placed by licensed nurses, mapped to your face and added gradually. Which is right for you, if either, is decided together at your complimentary consultation.</p>
           <!-- Signature: the treatment map drawing (decorative; palette rides the :root tokens) -->
           <div class="profile reveal" id="map" style="--d:.18s">
             <svg viewBox="30 72 254 396" role="img" focusable="false" aria-label="A single flowing line drawing of a woman's profile with swept back hair, marked with five treatment points: forehead, between the brows, beside the eye, the lips, and the jawline.">
@@ -838,10 +776,10 @@
             </svg>
           </div>
           <!-- SWAP: map fine print -->
-          <p class="map-fine reveal" style="--d:.24s">Whether a relaxer or a filler fits, and exactly what it costs, is decided together at your complimentary consultation. Costs are explained up front, with no surprises.</p>
+          <p class="map-fine reveal" style="--d:.24s">Wrinkle-relaxing injections are prescription treatments. What fits your face, if anything, and what it costs, is talked through plainly at your consultation.</p>
         </div>
         <div class="area-list reveal">
-          <!-- SWAP: 8 area ledger rows (name, note, family). The ledger reveals once, as one block; rows never animate individually. -->
+          <!-- SWAP: 6 area ledger rows (name, note, family). The ledger reveals once, as one block; rows never animate individually. -->
           <article class="area-row">
             <span class="no" aria-hidden="true">01</span>
             <div>
@@ -885,24 +823,8 @@
           <article class="area-row">
             <span class="no" aria-hidden="true">06</span>
             <div>
-              <h3>Under the eyes</h3>
-              <p class="desc">Softens hollowness in the under eye area so you look rested, planned carefully and placed conservatively.</p>
-            </div>
-            <span class="units">Filler<small>Hyaluronic acid</small></span>
-          </article>
-          <article class="area-row">
-            <span class="no" aria-hidden="true">07</span>
-            <div>
               <h3>Smile and marionette lines</h3>
               <p class="desc">The folds that frame the mouth, from the nose down. Smoothed with filler so they soften without changing your smile.</p>
-            </div>
-            <span class="units">Filler<small>Hyaluronic acid</small></span>
-          </article>
-          <article class="area-row">
-            <span class="no" aria-hidden="true">08</span>
-            <div>
-              <h3>Chin and jawline</h3>
-              <p class="desc">A weak chin or soft jawline, given quiet definition with filler. An advanced area, planned conservatively.</p>
             </div>
             <span class="units">Filler<small>Hyaluronic acid</small></span>
           </article>
@@ -916,7 +838,7 @@
         <!-- SWAP: visit kicker + heading + lede -->
         <p class="kicker reveal">The visit</p>
         <h2 class="reveal" style="--d:.06s">The needle comes last.</h2>
-        <p class="lead reveal" style="--d:.12s">The injection is the shortest part of the visit. The listening before it, and the follow up after it, are where the result is made.</p>
+        <p class="lead reveal" style="--d:.12s">The injection is the shortest part of the visit. The listening before it and the follow up after it are where the result is made.</p>
       </div>
       <div class="appt-grid">
         <!-- SWAP: visit figure. Still for every device; on >=960px the matching film mounts lazily from data-film. -->
@@ -1068,7 +990,7 @@
           <!-- SWAP: studio kicker + heading + lede -->
           <p class="kicker reveal">The studio</p>
           <h2 class="reveal" style="--d:.06s">A real place, <span class="nw">on Cedar Creek Lake.</span></h2>
-          <p class="lead reveal" style="--d:.12s">Cedar Creek Cosmo was established by Lance and Brennan Popham, locals raising their family here, who turned Cedar Creek Clinic into the lake's own destination for wellness and beauty. A luxury spa with a hometown feel.</p>
+          <p class="lead reveal" style="--d:.12s">A luxury spa with a hometown feel, in Gun Barrel City since 2020. Real people and a real front desk.</p>
         </div>
         <!-- SWAP: team photo + caption (the studio's own photograph from cedarcreekcosmo.com/about-1; names as captioned there) -->
         <figure class="team-fig reveal">
@@ -1081,27 +1003,19 @@
             <div class="media"><img src="cedar-creek-assets/founders-front-desk.webp" width="960" height="1228" alt="Lance and Brennan Popham standing beside the C3 monogram on the studio's front desk" loading="lazy" decoding="async"></div>
             <figcaption>Lance and Brennan Popham, founders, at the studio</figcaption>
           </figure>
-          <!-- SWAP: 4 trust rows + address card -->
+          <!-- SWAP: 2 trust rows + address card -->
           <div>
             <div class="principle reveal">
               <span class="pm" aria-hidden="true">01</span>
-              <div><h3>Licensed nurses, every visit</h3><p>Your care is delivered by licensed providers, in the studio, every time. Christyl, Kelsey, and Stephanie are registered nurses, and the whole team plans to see you again.</p></div>
+              <div><h3>Licensed nurses, every visit</h3><p>Christyl, Kelsey, and Stephanie are registered nurses. Your care is delivered by licensed providers, in the studio, every time.</p></div>
             </div>
             <div class="principle reveal" style="--d:.06s">
               <span class="pm" aria-hidden="true">02</span>
-              <div><h3>Close to home</h3><p>In Gun Barrel City, right on the lake. Skip the drive to Dallas or Tyler; the studio keeps lake hours, knows you by name, and follows up like a neighbor, because it is one.</p></div>
-            </div>
-            <div class="principle reveal" style="--d:.12s">
-              <span class="pm" aria-hidden="true">03</span>
-              <div><h3>A real phone, a real front desk</h3><p>Call <a class="tlink" href="tel:+19038025130">(903) 802-5130</a> and you reach the studio itself. Questions before you book are welcome, and the consultation is complimentary either way.</p></div>
-            </div>
-            <div class="principle reveal" style="--d:.18s">
-              <span class="pm" aria-hidden="true">04</span>
-              <div><h3>Since 2020</h3><p>On the lake since 2020, and rated 5.0 across 34 Google reviews by people right here. A real place, not a pop-up passing through.</p></div>
+              <div><h3>Founded by locals</h3><p>Lance and Brennan Popham, raising their family here, turned Cedar Creek Clinic into the lake's own destination for wellness and beauty. Call <a class="tlink" href="tel:+19038025130">(903) 802-5130</a> and you reach the studio itself.</p></div>
             </div>
             <div class="lake-card reveal" style="--d:.24s">
               <b><a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX 75156</a></b>
-              <span>Monday to Friday 8:30 to 6:00 &middot; Saturday 9:00 to 5:00 &middot; Closed Sunday</span>
+              <span>Monday to Friday 8:30 to 6:00 &middot; Saturday 9:00 to 5:00 &middot; Closed Sunday &middot; (903) 802-5130</span>
             </div>
           </div>
         </div>
