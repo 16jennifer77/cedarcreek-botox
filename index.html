@@ -636,6 +636,18 @@
     .hero-chips li{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--hair);background:rgba(14,21,18,.42);backdrop-filter:blur(6px);padding:.52rem .8rem;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink-2);line-height:1.3}
     .hero-chips li::before{content:"";width:6px;height:6px;background:var(--vio);transform:rotate(45deg);flex:none}
     @media (max-width:719px){.hero-chips li{font-size:.58rem;letter-spacing:.12em;padding:.45rem .65rem}}
+    /* is this you: four hairline cards, gold line icon + corner number (v18.6, Jennifer 2026-08-16) */
+    .you-grid{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair)}
+    @media (min-width:640px){.you-grid{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:1020px){.you-grid{grid-template-columns:repeat(4,1fr)}}
+    .you-card{position:relative;background:var(--noir-2);padding:clamp(1.6rem,2.4vw,2.1rem);display:grid;gap:.55rem;align-content:start;transition:background .25s var(--ease)}
+    .you-card:hover{background:var(--panel)}
+    .you-ic{width:46px;height:46px;display:grid;place-items:center;border:1px solid var(--hair);background:var(--noir);color:var(--vio);margin-bottom:1rem}
+    .you-ic svg{width:22px;height:22px}
+    .you-no{position:absolute;top:clamp(1.6rem,2.4vw,2.1rem);right:clamp(1.6rem,2.4vw,2.1rem);font-family:var(--disp);color:var(--vio);font-size:.86rem;letter-spacing:.14em}
+    .you-card h3{font-size:clamp(1.25rem,1.6vw,1.45rem);line-height:1.22}
+    .you-card p{color:var(--muted);font-size:.93rem;line-height:1.6}
+    @media (max-width:639px){.you-card{grid-template-columns:46px 1fr;column-gap:1.1rem;padding:1.3rem 1.25rem}.you-ic{grid-row:1/3;margin-bottom:0}.you-card h3,.you-card p{grid-column:2}.you-no{top:1.3rem;right:1.25rem}}
     /* stat band: three facts, word stats a size down from the number */
     @media (min-width:720px){.stats.stats3 ul{grid-template-columns:repeat(3,1fr)}}
     .stats3 b.word{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.15;padding-top:.35rem;text-shadow:none}
@@ -744,7 +756,7 @@
   03. Nav brand, links, CTA + the mobile Call / Book bar (in the header, under the name bar; no hamburger)
   04. Hero: still (hero-treatment.webp, preloaded, slow Ken Burns; film reverted 2026-08-16) + eyebrow (locations only), H1 + sub (judged lineage), 2 CTAs, 4 chips
   05. Stat band: 3 facts (5.0 across 36 / on the lake / complimentary)
-  06. Is this you?: H2 (no lede) + 4 pain pillars
+  06. Is this you?: H2 (no lede) + 4 pain cards (icon, number, label, line)
   07. Where filler can help: H2 (no lede) + profile drawing (3 filler points) + 4 area rows
   08. What to expect: consult figure + heading + 6 expectation rows + CTA repeat
   09. (The visit section was removed, Jennifer 2026-08-16; the consult-pause still + film stay in the asset folders unused)
@@ -826,31 +838,35 @@
       </ul>
     </section>
 
-    <!-- ============ 3 · IS THIS YOU?: four pain rows (H2, no lede) ============ -->
+    <!-- ============ 3 · IS THIS YOU?: four cards, icon + label + line (H2, no lede) ============ -->
     <section class="sec wrap" id="you">
       <div class="sec-head">
         <!-- SWAP: pain heading (no lede) -->
         <h2 class="reveal">Is this you?</h2>
       </div>
-      <!-- SWAP: 4 pain pillars (number, display line, one sentence) -->
-      <div class="pillars">
-        <div class="pillar reveal">
-          <span class="pl">01</span>
+      <!-- SWAP: 4 pain cards (icon, number, display line, one sentence) -->
+      <div class="you-grid">
+        <div class="you-card reveal">
+          <span class="you-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.5s6 6.6 6 11a6 6 0 0 1-12 0c0-4.4 6-11 6-11Z"/></svg></span>
+          <span class="you-no" aria-hidden="true">01</span>
           <h3>Lost volume</h3>
           <p>Cheeks and lips that have thinned with time.</p>
         </div>
-        <div class="pillar reveal" style="--d:.07s">
-          <span class="pl">02</span>
+        <div class="you-card reveal" style="--d:.07s">
+          <span class="you-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 4.5c-2.8 4.2-2.8 10.8 0 15"/><path d="M15.5 4.5c2.8 4.2 2.8 10.8 0 15"/><path d="M12 9.5v5"/></svg></span>
+          <span class="you-no" aria-hidden="true">02</span>
           <h3>Deeper folds</h3>
           <p>Smile lines that makeup settles into.</p>
         </div>
-        <div class="pillar reveal" style="--d:.14s">
-          <span class="pl">03</span>
+        <div class="you-card reveal" style="--d:.14s">
+          <span class="you-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12c3.2-4.2 6.2-4.6 9-2.4 2.8-2.2 5.8-1.8 9 2.4-3.2 4.8-6.2 6.4-9 6.4S6.2 16.8 3 12Z"/><path d="M3 12h18"/></svg></span>
+          <span class="you-no" aria-hidden="true">03</span>
           <h3>Thin lips</h3>
           <p>Lips you'd like subtly fuller, still yours.</p>
         </div>
-        <div class="pillar reveal" style="--d:.21s">
-          <span class="pl">04</span>
+        <div class="you-card reveal" style="--d:.21s">
+          <span class="you-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="6" r="2.2"/><path d="M8.2 18H14a3.6 3.6 0 0 0 0-7.2h-4A2.4 2.4 0 0 1 10 6h5.8" stroke-dasharray="2.6 2.2"/></svg></span>
+          <span class="you-no" aria-hidden="true">04</span>
           <h3>The Dallas drive</h3>
           <p>An hour each way for care that lives right here.</p>
         </div>
