@@ -582,6 +582,17 @@
     @media (min-width:820px){.foot-grid{grid-template-columns:2fr 1fr 1fr}}
     .foot-bottom .sep{margin-inline:.35rem;color:var(--hair)}
     .foot-bottom .maplink{color:var(--ink-2)}
+    /* v17: the map's two family panels (replace the eight-row ledger) */
+    .fams{display:grid;gap:1.1rem;align-self:center}
+    .fam{border:1px solid var(--hair);background:var(--noir);padding:clamp(1.6rem,2.6vw,2.2rem)}
+    .fam-label{display:block;font-size:.64rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--vio);margin-bottom:.8rem}
+    .fam h3{font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.25;margin-bottom:1.3rem;max-width:22ch}
+    .fam ul{list-style:none;display:grid;gap:0}
+    .fam li{display:grid;gap:.15rem;padding-block:.85rem;border-top:1px solid var(--hair-soft)}
+    .fam li b{font-family:var(--disp);font-weight:500;font-size:1.02rem;color:var(--ink)}
+    .fam li span{font-size:.88rem;color:var(--muted);line-height:1.55}
+    @media (min-width:760px){.fam li{grid-template-columns:minmax(0,11.5rem) 1fr;gap:1.2rem;align-items:baseline}}
+    .map-side .profile{max-width:300px}
     /* sticky mobile call / book bar (phone leads convert best); footer clears it */
     .callbar{display:none}
     @media (max-width:959px){
@@ -611,7 +622,7 @@
   05. Credentials strip: 4 trust marks
   06. Sound familiar: pain lede + 2 promise rows + consult figure (nurse and patient)
   07. Why Cedar Creek Cosmo: 4 pillars (label, display line, one sentence)
-  08. What you get (the map): two-family lede + profile drawing + 6 area ledger rows + fine print
+  08. What you get (the map): lede + profile drawing + 2 family panels (3 areas each) + fine print
   10. The visit: consult figure (still + desktop film via data-film) + 4 numbered plates
   11. FAQ (centered): 6 question and answer pairs, all closed until opened
   13. Reviews: featured quote panel + 8 verbatim Google cards (6 shown, 2 behind Show more) + disclaimer (claim source comment above)
@@ -762,7 +773,7 @@
           <!-- SWAP: treatment map kicker, heading, copy -->
           <p class="kicker reveal">What you get</p>
           <h2 class="reveal" style="--d:.06s">Two ways <span class="nw">to refresh.</span></h2>
-          <p class="lead reveal" style="--d:.12s">Facial injections here fall into two families: wrinkle-relaxing injections that soften expression lines, and dermal filler that restores subtle volume and smooths folds. Both are placed by licensed nurses, mapped to your face and added gradually. Which is right for you, if either, is decided together at your complimentary consultation.</p>
+          <p class="lead reveal" style="--d:.12s">Two families, both placed by licensed nurses, mapped to your face and added gradually. Which fits you, if either, is decided together at your complimentary consultation.</p>
           <!-- Signature: the treatment map drawing (decorative; palette rides the :root tokens) -->
           <div class="profile reveal" id="map" style="--d:.18s">
             <svg viewBox="30 72 254 396" role="img" focusable="false" aria-label="A single flowing line drawing of a woman's profile with swept back hair, marked with five treatment points: forehead, between the brows, beside the eye, the lips, and the jawline.">
@@ -778,58 +789,28 @@
             </svg>
           </div>
           <!-- SWAP: map fine print -->
-          <p class="map-fine reveal" style="--d:.24s">Wrinkle-relaxing injections are prescription treatments. What fits your face, if anything, and what it costs, is talked through plainly at your consultation.</p>
+          <p class="map-fine reveal" style="--d:.24s">Wrinkle-relaxing injections are prescription treatments. What fits your face, and what it costs, is talked through plainly at your consultation.</p>
         </div>
-        <div class="area-list reveal">
-          <!-- SWAP: 6 area ledger rows (name, note, family). The ledger reveals once, as one block; rows never animate individually. -->
-          <article class="area-row">
-            <span class="no" aria-hidden="true">01</span>
-            <div>
-              <h3>Forehead creases</h3>
-              <p class="desc">The horizontal rows that deepen when you raise your brows. Softened, not switched off, so expression survives.</p>
-            </div>
-            <span class="units">Relaxer<small>Expression lines</small></span>
-          </article>
-          <article class="area-row">
-            <span class="no" aria-hidden="true">02</span>
-            <div>
-              <h3>Frown lines</h3>
-              <p class="desc">The elevens between the brows, the face's most rehearsed crease and the classic first treatment.</p>
-            </div>
-            <span class="units">Relaxer<small>Expression lines</small></span>
-          </article>
-          <article class="area-row">
-            <span class="no" aria-hidden="true">03</span>
-            <div>
-              <h3>Crow's feet</h3>
-              <p class="desc">The fan at the outer corner of each eye. Treated lightly, so a real smile still reaches the eyes.</p>
-            </div>
-            <span class="units">Relaxer<small>Expression lines</small></span>
-          </article>
-          <article class="area-row">
-            <span class="no" aria-hidden="true">04</span>
-            <div>
-              <h3>Lips</h3>
-              <p class="desc">Thin lips and lipstick lines, restored gently with hyaluronic acid filler. Subtle by design, never overdone.</p>
-            </div>
-            <span class="units">Filler<small>Hyaluronic acid</small></span>
-          </article>
-          <article class="area-row">
-            <span class="no" aria-hidden="true">05</span>
-            <div>
-              <h3>Cheeks</h3>
-              <p class="desc">Subtle volume where cheeks have flattened, lifting the midface and catching light the way it used to.</p>
-            </div>
-            <span class="units">Filler<small>Hyaluronic acid</small></span>
-          </article>
-          <article class="area-row">
-            <span class="no" aria-hidden="true">06</span>
-            <div>
-              <h3>Smile and marionette lines</h3>
-              <p class="desc">The folds that frame the mouth, from the nose down. Smoothed with filler so they soften without changing your smile.</p>
-            </div>
-            <span class="units">Filler<small>Hyaluronic acid</small></span>
-          </article>
+        <div class="fams">
+          <!-- SWAP: 2 family panels (label, display line, 3 areas each) -->
+          <div class="fam reveal">
+            <span class="fam-label">Family one &middot; Wrinkle-relaxing injections</span>
+            <h3>Softens the lines that movement makes.</h3>
+            <ul>
+              <li><b>Forehead creases</b><span>Softened, not switched off, so expression survives.</span></li>
+              <li><b>Frown lines</b><span>The elevens between the brows, the classic first treatment.</span></li>
+              <li><b>Crow's feet</b><span>Treated lightly, so a real smile still reaches the eyes.</span></li>
+            </ul>
+          </div>
+          <div class="fam reveal" style="--d:.08s">
+            <span class="fam-label">Family two &middot; Dermal filler</span>
+            <h3>Restores subtle volume, smooths folds.</h3>
+            <ul>
+              <li><b>Lips</b><span>Thin lips and lipstick lines, restored gently. Never overdone.</span></li>
+              <li><b>Cheeks</b><span>Quiet volume where cheeks have flattened, lifting the midface.</span></li>
+              <li><b>Smile and marionette lines</b><span>The folds that frame the mouth, softened without changing your smile.</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
