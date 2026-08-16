@@ -49,15 +49,26 @@
   treatment-room film (hero-treatment.mp4 over hero-treatment.jpg, subject weighted right,
   object-position tuned per viewport); the golden-ink film remains in cedar-creek-films/ if
   the abstract hero is ever wanted back.
+
+  V18 (2026-08-16, Jennifer's spec): the page was re-cut onto the eleven-section fused spine and
+  repositioned on dermal filler. Order: hero (eyebrow = locations only, H1 + sub judged lineage,
+  four chips) > stat band > is this you (4) > where filler can help (drawing + 4 rows) > what to
+  expect (6 + CTA) > the visit (6 steps) > offer block on the lit ground (real team photo) > trust
+  band (5 pairs) > the essay (one prose block, founders photo) > reviews (featured five, verbatim,
+  no Stephanie-named reviewers) > closing CTA + form (full name / phone / email / consult type)
+  > FAQ (kept below the form, Jennifer 2026-08-15) > footer. Hero is a still (film reverted the same
+  day). Divergences from google-ads-lp-cro.md remain deliberate: top Call / Book bar on phones,
+  FAQ closed and below the form. Previous cut saved beside this file as
+  cedar-creek-cosmo-injectables-v17.8-SAVED-2026-08-16.html.
 -->
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SWAP: page title. Keep the pipe separator, never a dash. -->
-  <title>Cedar Creek Cosmo | Facial Injections on Cedar Creek Lake</title>
+  <title>Cedar Creek Cosmo | Dermal Filler on Cedar Creek Lake</title>
   <!-- SWAP: meta description, 150 to 160 characters. -->
-  <meta name="description" content="Facial injections that still look like you. Wrinkle-relaxing injections and dermal filler, placed by licensed nurses in Gun Barrel City on Cedar Creek Lake. Complimentary consults.">
+  <meta name="description" content="Filler you have to look twice to see. Dermal filler, planned to your face, at our Gun Barrel City studio on Cedar Creek Lake. Complimentary consultation, no obligation.">
   <meta name="theme-color" content="#0E1512">
   <!-- ad destination: keep out of the organic index -->
   <meta name="robots" content="noindex, nofollow">
@@ -619,6 +630,83 @@
       #reserve{scroll-margin-top:calc(132px - 1.75rem + 1rem)}
     }
 
+    /* ---------- v18: eleven-section fused spine (2026-08-16) ---------- */
+    /* hero chips replace the evaluation note */
+    .hero-chips{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem .6rem;max-width:60ch}
+    .hero-chips li{display:inline-flex;align-items:center;gap:.55rem;border:1px solid var(--hair);background:rgba(14,21,18,.42);backdrop-filter:blur(6px);padding:.52rem .8rem;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--ink-2);line-height:1.3}
+    .hero-chips li::before{content:"";width:6px;height:6px;background:var(--vio);transform:rotate(45deg);flex:none}
+    @media (max-width:719px){.hero-chips li{font-size:.58rem;letter-spacing:.12em;padding:.45rem .65rem}}
+    /* stat band: three facts, word stats a size down from the number */
+    @media (min-width:720px){.stats.stats3 ul{grid-template-columns:repeat(3,1fr)}}
+    .stats3 b.word{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.15;padding-top:.35rem;text-shadow:none}
+    .stats3 li{padding-inline:1rem}
+    /* area rows without the units column */
+    @media (min-width:860px){.area-row{grid-template-columns:3rem minmax(0,1fr)}}
+    .map-side h2{margin-bottom:1.6rem}
+    /* what to expect: label + line rows */
+    .expect-list li{display:grid;grid-template-columns:22px 1fr;gap:.35rem 1.1rem;align-items:baseline}
+    .expect-list li::before{margin-top:.72rem}
+    .expect-list li b{font-family:var(--disp);font-weight:500;color:var(--ink);font-size:1.06rem;letter-spacing:.01em}
+    .expect-list li span{grid-column:2;color:var(--muted);font-size:.92rem;line-height:1.55}
+    @media (min-width:640px){.expect-list li{grid-template-columns:22px minmax(0,15rem) 1fr}.expect-list li span{grid-column:auto}}
+    #expect .hero-cta{margin-top:2rem;margin-bottom:0}
+    /* the visit: six plates sit two across beside the sticky figure */
+    @media (min-width:640px){.appt-grid .plates{grid-template-columns:repeat(2,1fr)}}
+    /* offer block on the lit ground */
+    .offer-sec .practice-grid{align-items:center}
+    .offer-fig .media{aspect-ratio:4/5}
+    .offer-fig .media>img{object-position:50% 20%;filter:grayscale(.15) sepia(.08) brightness(.98) contrast(1.03)}
+    .offer-fig .media::after{background:linear-gradient(164deg,rgba(194,161,101,.05),rgba(14,21,18,.14))}
+    @media (max-width:639px){.pillar p{max-width:none}}
+    .offer-body h2{margin-bottom:1rem}
+    .offer-body .lead{margin-bottom:.4rem}
+    .lit .rlist{margin-top:1.4rem;border-color:var(--onlit-hair)}
+    .lit .rlist li{color:var(--onlit-2);border-color:var(--onlit-hair-soft)}
+    .lit .rlist li::before{background:var(--vio-deep)}
+    .promise{margin-top:1.6rem;font-family:var(--disp);font-size:1.22rem;color:var(--onlit);letter-spacing:.01em}
+    .offer-body .hero-cta{margin-top:1.5rem;margin-bottom:1.3rem}
+    .lit .btn{background:var(--cedar);color:var(--lit);border-color:var(--cedar)}
+    .lit .btn:hover{background:var(--onlit);border-color:var(--onlit);color:var(--lit)}
+    .lit .btn-ghost{background:transparent;color:var(--onlit);border-color:var(--onlit-hair)}
+    .lit .btn-ghost:hover{color:var(--vio-deep);border-color:var(--vio-deep)}
+    .lit .fine{color:var(--onlit-3);font-size:.82rem;line-height:1.6;max-width:52ch}
+    /* trust band: five pairs */
+    .tband{border-block:1px solid var(--hair);background:var(--noir-2)}
+    .tband ul{list-style:none;display:grid;grid-template-columns:1fr}
+    .tband li{display:grid;gap:.3rem;text-align:center;padding:1.35rem 1.1rem;border-top:1px solid var(--hair-soft)}
+    .tband li:first-child{border-top:0}
+    .tband b{font-family:var(--disp);font-weight:500;font-size:1.08rem;color:var(--ink);letter-spacing:.01em}
+    .tband span{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+    @media (min-width:720px) and (max-width:1019px){
+      .tband ul{grid-template-columns:repeat(6,1fr)}
+      .tband li{grid-column:span 2;border-top:0;border-left:1px solid var(--hair-soft);padding-block:1.6rem}
+      .tband li:nth-child(1),.tband li:nth-child(4){border-left:0}
+      .tband li:nth-child(4){grid-column:2/span 2}
+      .tband li:nth-child(4),.tband li:nth-child(5){border-top:1px solid var(--hair-soft)}
+    }
+    @media (min-width:1020px){
+      .tband ul{grid-template-columns:repeat(5,1fr)}
+      .tband li{border-top:0;border-left:1px solid var(--hair-soft);padding-block:1.8rem}
+      .tband li:first-child{border-left:0}
+    }
+    /* the essay: one prose block */
+    .essay-grid{align-items:center}
+    .essay{font-size:1.1rem;line-height:1.82;color:var(--ink-2);max-width:60ch}
+    #essay h2{margin-bottom:1.3rem;text-wrap:balance;max-width:19ch}
+    /* reviews: four full-text cards, two across */
+    .grev-four{grid-template-columns:1fr}
+    @media (min-width:640px){.grev-four{grid-template-columns:repeat(2,1fr)}}
+    @media (min-width:980px){.grev-four{grid-template-columns:repeat(2,1fr)}}
+    .grev-four .grev-card blockquote{display:block;-webkit-line-clamp:unset;overflow:visible}
+    /* closing form column */
+    .form-col{display:grid;gap:1.1rem}
+    .form-alt{font-size:.88rem;color:var(--ink-2);line-height:1.7;text-align:center}
+    .form-alt a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--hair)}
+    .form-alt a:hover{color:var(--vio-soft);border-color:var(--vio)}
+    .form-alt .sep{margin-inline:.4rem;color:var(--faint)}
+    @media (min-width:720px){.form-alt a{white-space:nowrap}}
+    @media (max-width:639px){.grev-four{grid-auto-rows:auto}}
+
     @media (prefers-reduced-motion:reduce){
       *,*::before,*::after{animation:none!important;transition:none!important}
       html.js .reveal:not(.in){transform:none}
@@ -632,21 +720,22 @@
   SWAP MANIFEST (every editable spot, in page order)
   01. <title> + meta description + noindex + hero preload (head)
   02. Favicon + palette tokens + fonts link
-  03. Nav brand, links, CTA (and the mobile sheet mirror of both)
-  04. Hero still (hero-treatment.webp, preloaded, slow Ken Burns; the film was reverted to this image on 2026-08-16, Jennifer) + kicker, headline (locked), subhead (locked), CTAs, evaluation note
-  05. Credentials strip: 4 trust marks
-  06. Sound familiar: pain lede + 2 promise rows + consult figure (nurse and patient)
-  07. Why Cedar Creek Cosmo: 4 pillars (label, display line, one sentence)
-  08. What you get (the map): lede + profile drawing + 2 family panels (3 areas each) + fine print
-  10. The visit: consult figure (still + desktop film via data-film) + 4 numbered plates
-  11. FAQ (centered): 6 question and answer pairs, all closed until opened
-  13. Reviews: featured quote panel + 8 verbatim Google cards (6 shown on desktop, 4 on phones, the rest behind Show more) + disclaimer (claim source comment above)
-  15. The studio: real team photo + founders photo + 2 trust rows + address card
-  16. CTA: heading, intro, consult line, lead form (unwired), placeholder submit note
-  17. Footer: blurb, address (Google listing link), contact, hours, copyright + privacy policy link, disclaimers, imagery honesty note
-  18. Mobile Call / Book bar (in the header, under the name bar; no hamburger)
+  03. Nav brand, links, CTA + the mobile Call / Book bar (in the header, under the name bar; no hamburger)
+  04. Hero: still (hero-treatment.webp, preloaded, slow Ken Burns; film reverted 2026-08-16) + eyebrow (locations only), H1 + sub (judged lineage), 2 CTAs, 4 chips
+  05. Stat band: 3 facts (5.0 across 36 / on the lake / complimentary)
+  06. Is this you?: H2 (no lede) + 4 pain pillars
+  07. Where filler can help: H2 (no lede) + profile drawing (3 filler points) + 4 area rows
+  08. What to expect: consult figure + heading + 6 expectation rows + CTA repeat
+  09. The visit: consult figure (still + desktop film via data-film) + heading (judged lineage) + 6 numbered plates
+  10. Offer block (lit ground): real team photo + heading + lede + 4 bullets + promise line + 2 CTAs + disclaimer
+  11. Trust band: 5 pairs (rating, nurse practitioner-led, natural, licensed injectors, on the lake)
+  12. The essay: founders photo + head (Tutera receipt 3) + ~78 word prose block + address card
+  13. Reviews: featured quote panel (Amber Swanson) + 4 verbatim Google cards (full text) + disclaimer (claim source comment above)
+  14. Closing CTA + form: heading (Tutera lineage), intro, location line, lead form (full name / phone / email / consult type; unwired), microcopy, prefer-to-talk line, placeholder submit note
+  15. FAQ (centered, below the form): 6 question and answer pairs, all closed until opened
+  16. Footer: blurb, address (Google listing link), contact, hours, copyright + privacy policy link, disclaimers, imagery honesty note
 ============================================================ -->
-<!-- Claim source: Cedar Creek Cosmo rated 5.0 across 34 Google reviews (Google Business listing, placeid ChIJP_MInecjSYYR_1JDZIE0byI), verified against the listing pull used on the copy-judged Cedar template page (viridian-portal, 2026-08-15). Review cards below are verbatim from that pull. Update the count when re-verified. -->
+<!-- Claim source: Cedar Creek Cosmo rated 5.0 across 36 Google reviews (Google Business listing, placeid ChIJP_MInecjSYYR_1JDZIE0byI), re-verified 2026-08-16 by reading the live listing (36 reviews, 5.0). Review quotes below are verbatim from the listing (Amber Swanson, Tonja Siegfried, Jessica Landes, Brooklynn Shelton, Bridget Mcmullen). Both Stephanie-named reviewers stay off the page (staff-name collision rule). Update the count when re-verified. -->
   <a class="skip" href="#main">Skip to main content</a>
 
   <header class="nav" id="nav">
@@ -659,7 +748,7 @@
       <nav aria-label="Primary">
         <!-- SWAP: nav links -->
         <ul class="nav-links">
-          <li><a href="#areas">The treatments</a></li>
+          <li><a href="#areas">Where filler helps</a></li>
           <li><a href="#visit">The visit</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -677,155 +766,153 @@
 
   <main id="main">
 
-    <!-- ============ 1 · HERO: is this for me? (static still, preloaded) ============ -->
-    <section class="hero" id="top" aria-label="Cedar Creek Cosmo, facial injections on Cedar Creek Lake">
+    <!-- ============ 1 · HERO: eyebrow (locations only), H1 + sub (judged lineage), CTAs, four chips ============ -->
+    <section class="hero" id="top" aria-label="Cedar Creek Cosmo, dermal filler on Cedar Creek Lake">
       <div class="media" id="herofilm" aria-hidden="true">
         <!-- SWAP: hero still (v17.8, Jennifer 2026-08-16: the hero film was reverted to this image on every device; slow Ken Burns via .kb). To bring the film back, restore data-film="cedar-creek-films/hero-treatment.mp4" data-film-mobile="cedar-creek-films/hero-treatment-mobile.mp4" on this div. -->
         <img class="kb" src="cedar-creek-assets/hero-treatment.webp" width="1600" height="894" alt="" fetchpriority="high" decoding="async">
       </div>
       <div class="hero-scrim" aria-hidden="true"></div>
       <div class="wrap hero-in">
-        <!-- SWAP: hero kicker, headline, subhead. H1 + sub are copy-judge locked; changing them means a re-judge. -->
-        <p class="kicker reveal">Facial injections &middot; Cedar Creek Lake</p>
-        <h1 class="reveal" style="--d:.06s">Facial injections that <span class="vio">still look <span class="nw">like you.</span></span></h1>
-        <p class="hero-sub reveal" style="--d:.12s">Provider-placed facial injections in Gun Barrel City, right here on the lake. Wrinkle-relaxing injections and dermal filler, planned with you for a natural, refreshed look, never frozen. Every treatment starts with a complimentary consultation to see if it's right for you.</p>
+        <!-- SWAP: hero eyebrow (locations only, per the Tutera eyebrow ruling), H1 + sub (judged lineage; changing them means a re-judge) -->
+        <p class="kicker reveal">Gun Barrel City &middot; Cedar Creek Lake</p>
+        <h1 class="reveal" style="--d:.06s">Filler you have to <span class="vio">look twice <span class="nw">to see.</span></span></h1>
+        <p class="hero-sub reveal" style="--d:.12s">Dermal filler, planned to your face, at our Gun Barrel <span class="nw">City studio.</span></p>
         <div class="hero-cta reveal" style="--d:.18s">
           <!-- SWAP: hero CTA labels + hrefs -->
-          <a class="btn" href="#reserve">Book a complimentary consult
+          <a class="btn" href="#reserve">Book your consultation
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a class="btn btn-ghost" href="tel:+19038025130">Call (903) 802-5130</a>
         </div>
-        <!-- SWAP: evaluation note -->
-        <p class="hero-note reveal" style="--d:.24s">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
-          Aesthetic treatments are elective and not right for everyone. Every plan starts with a complimentary consultation, and if the honest answer is to wait, we will say so.
-        </p>
+        <!-- SWAP: four hero chips -->
+        <ul class="hero-chips reveal" style="--d:.24s" aria-label="At a glance">
+          <li>Complimentary consultation</li>
+          <li>Natural, never overdone</li>
+          <li>Nurse practitioner-led</li>
+          <li>On Cedar Creek Lake</li>
+        </ul>
       </div>
     </section>
 
-    <!-- ============ CREDENTIALS STRIP ============ -->
-    <section class="creds" aria-label="Clinical assurances">
-      <h2 class="vh">Clinical assurances</h2>
-      <!-- SWAP: 4 trust marks -->
+    <!-- ============ 2 · STAT BAND: three facts ============ -->
+    <section class="stats stats3" aria-label="At a glance">
+      <h2 class="vh">At a glance</h2>
+      <!-- SWAP: 3 stats (rating + count must match the claim source comment at the top of body) -->
       <ul class="wrap">
-        <li class="reveal">Rated 5.0 on Google</li>
-        <li class="reveal" style="--d:.06s">Placed by licensed nurses</li>
-        <li class="reveal" style="--d:.12s">Natural, never frozen</li>
-        <li class="reveal" style="--d:.18s">Right here on the lake</li>
+        <li class="reveal"><b>5.0</b><span>across 36 Google reviews</span></li>
+        <li class="reveal" style="--d:.06s"><b class="word">On the lake</b><span>no drive to Dallas</span></li>
+        <li class="reveal" style="--d:.12s"><b class="word">Complimentary</b><span>consultation, no obligation</span></li>
       </ul>
     </section>
 
-    <!-- ============ 2 · SOUND FAMILIAR: what's my pain? ============ -->
-    <section class="sec wrap" id="natural">
-      <div class="result-grid">
-        <div>
-          <!-- SWAP: pain kicker, heading, lede, 3 promise rows -->
-          <p class="kicker reveal">Sound familiar?</p>
-          <h2 class="reveal" style="--d:.06s">Quiet hands, <span class="nw">small doses.</span></h2>
-          <p class="lead reveal" style="--d:.12s">First time with injectables, or burned by an overdone result somewhere else? Overdone is a judgment problem, not a product problem. What changes the result is the eye behind the needle, and a willingness to add as little as possible.</p>
-          <ul class="rlist reveal" style="--d:.18s">
-            <li>A real look. Your provider studies your face and plans placement to suit your features, not a one-size template.</li>
-            <li>A straight answer. If the honest call is less, or nothing at all, that is what you will hear.</li>
-          </ul>
-        </div>
-        <!-- SWAP: consult figure (nurse and patient) -->
-        <figure class="result-fig reveal" style="--d:.1s">
-          <div class="media"><img src="cedar-creek-assets/consult-mirror.webp" width="960" height="1192" alt="A patient holds a gold hand mirror while a nurse talks through the plan in the warm studio" loading="lazy" decoding="async"></div>
-          <figcaption>The mirror does the talking</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ============ 3 · WHY CEDAR CREEK COSMO: four pillars ============ -->
-    <section class="sec wrap" id="why">
+    <!-- ============ 3 · IS THIS YOU?: four pain rows (H2, no lede) ============ -->
+    <section class="sec wrap" id="you">
       <div class="sec-head">
-        <!-- SWAP: why kicker + heading + lede -->
-        <p class="kicker reveal">Why Cedar Creek Cosmo</p>
-        <h2 class="reveal" style="--d:.06s">What sets the <span class="nw">studio apart.</span></h2>
-        <p class="lead reveal" style="--d:.12s">A lot of places will sell you injectables. Four things are different here.</p>
+        <!-- SWAP: pain heading (no lede) -->
+        <h2 class="reveal">Is this you?</h2>
       </div>
-      <!-- SWAP: 4 pillars (label, headline, one line) -->
+      <!-- SWAP: 4 pain pillars (number, display line, one sentence) -->
       <div class="pillars">
         <div class="pillar reveal">
-          <span class="pl">The plan</span>
-          <h3>Read first, <span class="nw">never a menu.</span></h3>
-          <p>A complimentary consult and a look at your face before anything is decided.</p>
+          <span class="pl">01</span>
+          <h3>Lost volume</h3>
+          <p>Cheeks and lips that have thinned with time.</p>
         </div>
         <div class="pillar reveal" style="--d:.07s">
-          <span class="pl">The injector</span>
-          <h3>Nurses who <span class="nw">know you.</span></h3>
-          <p>Christyl, Kelsey, and Stephanie, RNs. Never whoever happens to be on shift.</p>
+          <span class="pl">02</span>
+          <h3>Deeper folds</h3>
+          <p>Smile lines that makeup settles into.</p>
         </div>
         <div class="pillar reveal" style="--d:.14s">
-          <span class="pl">The sell</span>
-          <h3>Less, <span class="nw">by default.</span></h3>
-          <p>Conservative and gradual, never overdone. Costs explained before anything is placed.</p>
+          <span class="pl">03</span>
+          <h3>Thin lips</h3>
+          <p>Lips you'd like subtly fuller, still yours.</p>
         </div>
         <div class="pillar reveal" style="--d:.21s">
-          <span class="pl">The drive</span>
-          <h3>Right here <span class="nw">on the lake.</span></h3>
-          <p>Gun Barrel City, with lake hours. No drive to Dallas or Tyler and back.</p>
+          <span class="pl">04</span>
+          <h3>The Dallas drive</h3>
+          <p>An hour each way for care that lives right here.</p>
         </div>
       </div>
     </section>
 
-    <!-- ============ 4b · TREATMENT MAP (signature: sticky side + area ledger) ============ -->
+    <!-- ============ 4 · WHERE FILLER CAN HELP (signature drawing + four rows; H2, no lede) ============ -->
     <section class="sec map-sec" id="areas">
       <div class="wrap map-grid">
         <div class="map-side">
-          <!-- SWAP: treatment map kicker, heading, copy -->
-          <p class="kicker reveal">What you get</p>
-          <h2 class="reveal" style="--d:.06s">Two ways <span class="nw">to refresh.</span></h2>
-          <p class="lead reveal" style="--d:.12s">Two families, both placed by licensed nurses, mapped to your face and added gradually. Which fits you, if either, is decided together at your complimentary consultation.</p>
-          <!-- Signature: the treatment map drawing (decorative; palette rides the :root tokens) -->
-          <div class="profile reveal" id="map" style="--d:.18s">
-            <svg viewBox="30 72 254 396" role="img" focusable="false" aria-label="A single flowing line drawing of a woman's profile with swept back hair, marked with five treatment points: forehead, between the brows, beside the eye, the lips, and the jawline.">
+          <!-- SWAP: heading (no lede) -->
+          <h2 class="reveal">Where filler <span class="nw">can help</span></h2>
+          <!-- Signature: the treatment map drawing (decorative; palette rides the :root tokens). Points: cheek, smile line, lips. -->
+<div class="profile reveal" id="map" style="--d:.18s">
+            <svg viewBox="30 72 254 396" role="img" focusable="false" aria-label="A single flowing line drawing of a woman's profile with swept back hair, marked with three filler points: the cheek, the smile line, and the lips.">
               <path class="line" pathLength="1000" d="M268 452 C248 400 238 344 234 286 C230 216 196 130 128 88 C116 108 106 128 102 150 C100 158 99 164 96 170 C88 182 79 198 74 210 C76 216 80 219 86 221 C85 226 84 230 85 234 C80 237 79 242 84 246 C79 250 80 256 86 261 C80 267 80 276 88 284 C94 290 102 293 110 294 C134 297 158 294 176 284 C190 290 194 306 186 324 C172 358 124 396 48 420"/>
               <path class="line l2" pathLength="1000" d="M110 188 C117 192 124 192 130 188"/>
               <path class="line l2" pathLength="1000" d="M84 217 C87 219 90 219 92 217"/>
               <path class="line l2" pathLength="1000" d="M86 248 C90 250 94 250 98 249"/>
-              <g class="pt"><circle class="pt-ring" cx="128" cy="134" r="12"/><circle class="pt-dot" cx="128" cy="134" r="3.2"/></g>
-              <g class="pt"><circle class="pt-ring" cx="114" cy="170" r="12"/><circle class="pt-dot" cx="114" cy="170" r="3.2"/></g>
-              <g class="pt"><circle class="pt-ring" cx="148" cy="186" r="12"/><circle class="pt-dot" cx="148" cy="186" r="3.2"/></g>
-              <g class="pt"><circle class="pt-ring" cx="117" cy="251" r="12"/><circle class="pt-dot" cx="117" cy="251" r="3.2"/></g>
-              <g class="pt"><circle class="pt-ring" cx="150" cy="287" r="12"/><circle class="pt-dot" cx="150" cy="287" r="3.2"/></g>
+              <g class="pt"><circle class="pt-ring" cx="142" cy="220" r="12"/><circle class="pt-dot" cx="142" cy="220" r="3.2"/></g>
+              <g class="pt"><circle class="pt-ring" cx="114" cy="232" r="12"/><circle class="pt-dot" cx="114" cy="232" r="3.2"/></g>
+              <g class="pt"><circle class="pt-ring" cx="100" cy="262" r="12"/><circle class="pt-dot" cx="100" cy="262" r="3.2"/></g>
             </svg>
           </div>
-          <!-- SWAP: map fine print -->
-          <p class="map-fine reveal" style="--d:.24s">Wrinkle-relaxing injections are prescription treatments. What fits your face, and what it costs, is talked through plainly at your consultation.</p>
         </div>
-        <div class="fams">
-          <!-- SWAP: 2 family panels (label, display line, 3 areas each) -->
-          <div class="fam reveal">
-            <span class="fam-label">Family one &middot; Wrinkle-relaxing injections</span>
-            <h3>Softens the lines that movement makes.</h3>
-            <ul>
-              <li><b>Forehead creases</b><span>Softened, not switched off, so expression survives.</span></li>
-              <li><b>Frown lines</b><span>The elevens between the brows, the classic first treatment.</span></li>
-              <li><b>Crow's feet</b><span>Treated lightly, so a real smile still reaches the eyes.</span></li>
-            </ul>
+        <!-- SWAP: 4 area rows -->
+        <div class="area-list">
+          <div class="area-row reveal">
+            <span class="no" aria-hidden="true">01</span>
+            <div><h3>Cheeks</h3><p class="desc">Helps restore subtle volume where time has softened it.</p></div>
           </div>
-          <div class="fam reveal" style="--d:.08s">
-            <span class="fam-label">Family two &middot; Dermal filler</span>
-            <h3>Restores subtle volume, smooths folds.</h3>
-            <ul>
-              <li><b>Lips</b><span>Thin lips and lipstick lines, restored gently. Never overdone.</span></li>
-              <li><b>Cheeks</b><span>Quiet volume where cheeks have flattened, lifting the midface.</span></li>
-              <li><b>Smile and marionette lines</b><span>The folds that frame the mouth, softened without changing your smile.</span></li>
-            </ul>
+          <div class="area-row reveal" style="--d:.06s">
+            <span class="no" aria-hidden="true">02</span>
+            <div><h3>Lips</h3><p class="desc">A little at a time, shaped to your face.</p></div>
+          </div>
+          <div class="area-row reveal" style="--d:.12s">
+            <span class="no" aria-hidden="true">03</span>
+            <div><h3>Smile lines</h3><p class="desc">Helps smooth the look of deeper folds.</p></div>
+          </div>
+          <div class="area-row reveal" style="--d:.18s">
+            <span class="no" aria-hidden="true">04</span>
+            <div><h3>Not sure yet</h3><p class="desc">Your consult decides together, and nothing is booked blind.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 4c · THE VISIT: the 4-step process (still + desktop film) ============ -->
+    <!-- ============ 5 · WHAT TO EXPECT: six rows + consult figure + CTA repeat ============ -->
+    <section class="sec wrap" id="expect">
+      <div class="result-grid">
+        <!-- SWAP: consult figure (nurse and patient, AI-modelled study) -->
+        <figure class="result-fig reveal" style="--d:.1s">
+          <div class="media"><img src="cedar-creek-assets/consult-mirror.webp" width="960" height="1192" alt="A patient holds a gold hand mirror while a nurse talks through the plan in the warm studio" loading="lazy" decoding="async"></div>
+          <figcaption>Planned with you, in the mirror</figcaption>
+        </figure>
+        <div>
+          <!-- SWAP: heading + 6 expectation rows + CTA -->
+          <p class="kicker reveal">What to expect</p>
+          <h2 class="reveal" style="--d:.06s">A refreshed version <span class="nw">of yourself.</span></h2>
+          <ul class="rlist expect-list reveal" style="--d:.12s">
+            <li><b>A natural look</b><span>a refreshed version of yourself, never overdone</span></li>
+            <li><b>A whole-face plan</b><span>balanced, built in the right order, with you</span></li>
+            <li><b>Skilled, licensed injectors</b><span>options talked through before anything is done</span></li>
+            <li><b>Start with one area</b><span>honest answers, including when the answer is to wait</span></li>
+            <li><b>Costs explained up front</b><span>gone over clearly at your consultation</span></li>
+            <li><b>Refined over time</b><span>at a pace that suits you</span></li>
+          </ul>
+          <div class="hero-cta reveal" style="--d:.18s">
+            <a class="btn" href="#reserve">Book your consultation
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6 · THE VISIT: from first question to a plan you understand (still + desktop film, six plates) ============ -->
     <section class="sec wrap" id="visit">
       <div class="sec-head">
-        <!-- SWAP: visit kicker + heading + lede -->
+        <!-- SWAP: visit kicker + heading (judged lineage) -->
         <p class="kicker reveal">The visit</p>
-        <h2 class="reveal" style="--d:.06s">The needle comes last.</h2>
-        <p class="lead reveal" style="--d:.12s">The injection is the shortest part of the visit. The listening before it and the follow up after it are where the result is made.</p>
+        <h2 class="reveal" style="--d:.06s">From first question to a plan you understand.</h2>
       </div>
       <div class="appt-grid">
         <!-- SWAP: visit figure. Still for every device; on >=960px the matching film mounts lazily from data-film. -->
@@ -833,212 +920,215 @@
           <div class="media" id="filmband" data-film="cedar-creek-films/consult-pause.mp4"><img src="cedar-creek-assets/consult-pause.webp" width="900" height="1613" alt="A provider and her patient share a warm unhurried conversation over a tablet in a bright studio room" loading="lazy" decoding="async"></div>
           <figcaption>Never rushed</figcaption>
         </figure>
-        <!-- SWAP: 4 visit plates -->
+        <!-- SWAP: 6 visit plates -->
         <div class="plates reveal">
         <article class="plate">
           <span class="pn" aria-hidden="true">01</span>
-          <span class="pl">Reach out</span>
-          <h3>Say what you'd soften</h3>
-          <p>Call or request a complimentary consultation online. Tell us what you would like to soften or refresh, or just what you have been wondering about.</p>
+          <span class="pl">Step one</span>
+          <h3>Book a consult</h3>
+          <p>Call or request a complimentary consultation at our Gun Barrel City studio, and tell us what you'd like to refresh.</p>
         </article>
         <article class="plate">
           <span class="pn" aria-hidden="true">02</span>
-          <span class="pl">Consultation</span>
-          <h3>Meet a provider</h3>
-          <p>A licensed provider looks, listens, and is honest about your options, including whether treatment is right for you at all. Complimentary, and no obligation.</p>
+          <span class="pl">Step two</span>
+          <h3>Meet your injector</h3>
+          <p>A skilled, licensed injector looks at the whole face, listens, and is honest about your options.</p>
         </article>
         <article class="plate">
           <span class="pn" aria-hidden="true">03</span>
-          <span class="pl">Treatment</span>
-          <h3>A natural looking plan</h3>
-          <p>If it makes sense, a conservative plan is placed with you. What to expect, and what it costs, is explained up front before anything is decided.</p>
+          <span class="pl">Step three</span>
+          <h3>A considered plan</h3>
+          <p>If it makes sense, a conservative plan is built with you, for a natural look.</p>
         </article>
         <article class="plate">
           <span class="pn" aria-hidden="true">04</span>
-          <span class="pl">Follow up</span>
+          <span class="pl">Step four</span>
+          <h3>First treatment</h3>
+          <p>Often starting with one area, only if right for you.</p>
+        </article>
+        <article class="plate">
+          <span class="pn" aria-hidden="true">05</span>
+          <span class="pl">Step five</span>
+          <h3>Settle in</h3>
+          <p>We follow up to see how you settled, with honest expectations set along the way.</p>
+        </article>
+        <article class="plate">
+          <span class="pn" aria-hidden="true">06</span>
+          <span class="pl">Step six</span>
           <h3>Refine over time</h3>
-          <p>We follow up to see how you settled and refine lightly. Natural results, adjusted at a pace that suits you, by a team that plans to see you again.</p>
+          <p>Results refined lightly over time, at a pace that suits you.</p>
         </article>
         </div>
       </div>
     </section>
 
-    <!-- ============ 6 · PROOF: the Google review wall (verbatim, named) ============ -->
+    <!-- ============ 7 · OFFER BLOCK: a complimentary first consultation (lit ground, real team photo) ============ -->
+    <section class="sec lit offer-sec" id="offer">
+      <div class="wrap practice-grid">
+        <!-- SWAP: team photo + caption (the studio's own photograph from cedarcreekcosmo.com/about-1; names as captioned there) -->
+        <figure class="practice-fig offer-fig reveal">
+          <div class="media"><img src="cedar-creek-assets/team-studio.webp" width="1400" height="1141" alt="The five-person Cedar Creek Cosmo team in black studio scrubs, standing together at the wood-slat front desk" loading="lazy" decoding="async"></div>
+          <figcaption>The Cedar Creek Cosmo team: Christyl, RN &middot; Kelsey, RN &middot; Brennan, manager &middot; Stephanie, RN &middot; Kensey, front desk</figcaption>
+        </figure>
+        <div class="offer-body">
+          <!-- SWAP: offer kicker, heading, lede, 4 bullets, promise line, CTAs, disclaimer -->
+          <p class="kicker reveal">The offer</p>
+          <h2 class="reveal" style="--d:.06s">A complimentary <span class="nw">first consultation.</span></h2>
+          <p class="lead reveal" style="--d:.12s">An honest look at what will help, what won't, and when to wait.</p>
+          <ul class="rlist reveal" style="--d:.18s">
+            <li>A whole-face look and honest answers</li>
+            <li>A conservative plan, often one area first</li>
+            <li>Skilled, licensed injectors</li>
+            <li>Costs explained clearly up front</li>
+          </ul>
+          <p class="promise reveal" style="--d:.22s">No pressure. No obligation. No surprises.</p>
+          <div class="hero-cta reveal" style="--d:.26s">
+            <a class="btn" href="#reserve">Book your consultation
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="tel:+19038025130">Call (903) 802-5130</a>
+          </div>
+          <p class="fine reveal" style="--d:.3s">Results vary. Planned with a provider and personalized to you at your consultation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8 · TRUST BAND: five pairs ============ -->
+    <section class="tband" aria-label="Why Cedar Creek Cosmo">
+      <h2 class="vh">Why Cedar Creek Cosmo</h2>
+      <!-- SWAP: 5 trust pairs (label + one line). FNP-C credential per Jennifer's 2026-08-16 spec; the studio site shows it only in the founders photo, confirm with the client if challenged. -->
+      <ul class="wrap">
+        <li class="reveal"><b>Rated 5.0 on Google</b><span>across 36 Google reviews</span></li>
+        <li class="reveal" style="--d:.05s"><b>Nurse practitioner-led</b><span>Lance Popham, FNP-C</span></li>
+        <li class="reveal" style="--d:.1s"><b>Natural, never overdone</b><span>planned with you, never pushed</span></li>
+        <li class="reveal" style="--d:.15s"><b>Skilled, licensed injectors</b><span>every visit, every treatment</span></li>
+        <li class="reveal" style="--d:.2s"><b>Right here on the lake</b><span>no drive to Dallas</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ 9 · THE ESSAY: the page's one prose block (founders photo beside it) ============ -->
+    <section class="sec trust" id="essay">
+      <div class="wrap practice-grid essay-grid">
+        <!-- SWAP: founders photo + caption (the studio's own photograph, not AI) -->
+        <figure class="practice-fig reveal">
+          <div class="media"><img src="cedar-creek-assets/founders-front-desk.webp" width="960" height="1228" alt="Lance and Brennan Popham standing beside the C3 monogram on the studio's front desk" loading="lazy" decoding="async"></div>
+          <figcaption>Lance and Brennan Popham, founders, at the studio</figcaption>
+        </figure>
+        <div>
+          <!-- SWAP: essay kicker, head (Tutera receipt 3), body (~78 words, judge PASS) -->
+          <p class="kicker reveal">Cedar Creek Cosmo</p>
+          <h2 class="reveal" style="--d:.06s">The result comes from the eye behind <span class="nw">the needle.</span></h2>
+          <p class="essay reveal" style="--d:.12s">A good result reads as you on your best day. People notice you look rested, but they can't point to why, and you still see the change you came for. That comes down to the eye behind the needle. Cedar Creek Cosmo is led by our nurse practitioner, every visit is with a skilled, licensed injector at our studio on Cedar Creek Lake, and your plan looks at the whole face and includes only what makes sense. Results vary.</p>
+          <div class="lake-card reveal" style="--d:.18s">
+            <b><a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX 75156</a></b>
+            <span>Monday to Friday 8:30 to 6:00 &middot; Saturday 9:00 to 5:00 &middot; Closed Sunday &middot; (903) 802-5130</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10 · REVIEWS: featured five, verbatim (Google), no Stephanie-named reviewers ============ -->
     <section class="sec wrap" id="reviews">
       <div class="sec-head">
         <!-- SWAP: reviews kicker + heading -->
-        <p class="kicker reveal">From the reviews</p>
-        <h2 class="reveal" style="--d:.06s">Loved right here <span class="nw">on the lake.</span></h2>
+        <p class="kicker reveal">What clients say</p>
+        <h2 class="reveal" style="--d:.06s">Clients come back.</h2>
       </div>
-      <!-- SWAP: featured panel: score (rating + count must match the claim source comment at the top of body) + one verbatim quote -->
+      <!-- SWAP: featured panel: score (rating + count must match the claim source comment at the top of body) + one verbatim quote (Amber Swanson, the Dallas line) -->
       <div class="grev-hero reveal">
         <div class="grev-scorecell">
           <svg class="grev-g" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg>
           <span class="grev-num">5.0</span>
           <span class="grev-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="grev-count">Rated 5.0 across 34 Google reviews</span>
+          <span class="grev-count">Rated 5.0 across 36 Google reviews</span>
           <a class="textlink" href="https://search.google.com/local/reviews?placeid=ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">Read all reviews on Google</a>
         </div>
         <figure class="grev-quote">
           <span class="qmark" aria-hidden="true">&#8220;</span>
-          <blockquote>She listens to exactly what you want, does not pressure you into anything more, and ensures it looks natural as I have requested. She follows up and checks in days and weeks after to make sure everything is ok and turned out the way I wanted.</blockquote>
-          <figcaption>Stephanie Self &middot; Jul 2025 &middot; Google review</figcaption>
+          <blockquote>Love this little gem &#128142; so happy I don&rsquo;t have to drive to Dallas to get my hydra-facial, IPL (melasma), or the many other services they offer. C3 also carries my favorite skincare line ZO Skin Health. I have been using this brand for 3 years now best skin care hands down. I may be a little obsessed. Thank y'all for the amazing services you provide to our town.</blockquote>
+          <figcaption>Amber Swanson &middot; Google review</figcaption>
         </figure>
       </div>
-      <!-- SWAP: 8 review cards, verbatim excerpts from verified Google reviews (equal-height grid, excerpts clamp at four lines) -->
-      <div class="grev-wall" id="grevWall">
+      <!-- SWAP: 4 review cards, verbatim from verified Google reviews (full text, no clamp) -->
+      <div class="grev-wall grev-four" id="grevWall">
         <figure class="grev-card reveal" style="--d:0.00s">
-          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">J</span><div class="grev-id"><span class="grev-name">Jessica Landes</span><span class="grev-date">Oct 2025 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
-          <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote>Stephanie is a queen! Love her so much. She always makes me so comfortable, incredible injector. And the sweetest! Love cedar creek cosmos</blockquote>
-        </figure>
-        <figure class="grev-card reveal" style="--d:0.05s">
-          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">C</span><div class="grev-id"><span class="grev-name">Crystal Kappes</span><span class="grev-date">May 2025 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
-          <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote>I am newer to the area and it&rsquo;s always a little scary trying to find a new place for injectable&rsquo;s. C3 made me feel so comfortable and all the ladies are so nice and professional! I found my place &#127800;&#128149;</blockquote>
-        </figure>
-        <figure class="grev-card reveal" style="--d:0.10s">
           <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">T</span><div class="grev-id"><span class="grev-name">Tonja Siegfried</span><span class="grev-date">Jun 2025 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
           <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           <blockquote>I can not say enough about this place. Everyone is so wonderful, make you feel like family. Kelsey Vieregge is my go to girl, she is so kind , patient and very passionate about her work. She will take her time with you , never steer you in the wrong direction and she gives great advice. She really knows her stuff! She is stuck with me for life! lol! I have been to different places and people , Cedar Creek Cosmo is the best in my book. You can not go wrong with whomever you choose.</blockquote>
         </figure>
-        <figure class="grev-card reveal" style="--d:0.00s">
-          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">B</span><div class="grev-id"><span class="grev-name">Bridget Mcmullen</span><span class="grev-date">Aug 2025 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
-          <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote>My experience at cedar creek cosmos was amazing , great relaxing environment and very friendly welcoming staff . Facial I got was amazing and my lips always look the best !!!!</blockquote>
-        </figure>
         <figure class="grev-card reveal" style="--d:0.05s">
-          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">K</span><div class="grev-id"><span class="grev-name">Kathy Rice</span><span class="grev-date">Feb 2025 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
+          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">J</span><div class="grev-id"><span class="grev-name">Jessica Landes</span><span class="grev-date">Oct 2025 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
           <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote>Walk in the door and trreated like royalty. very professional and knowledgeable nurses on staff with the best facial around.</blockquote>
+          <blockquote>Stephanie is a queen! Love her so much. She always makes me so comfortable, incredible injector. And the sweetest! Love cedar creek cosmos</blockquote>
         </figure>
         <figure class="grev-card reveal" style="--d:0.10s">
           <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">B</span><div class="grev-id"><span class="grev-name">Brooklynn Shelton</span><span class="grev-date">Apr 2024 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
           <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           <blockquote>I always feel so at home at my appointments! It&rsquo;s a very relaxing environment and a nice way to spend the day being pampered! Every staff member that I have met is always smiling, happy to help and very informative about each procedure. I LOVE Cedar Creek Cosmo and highly recommend!</blockquote>
         </figure>
-        <figure class="grev-card reveal grev-more" hidden style="--d:0.00s">
-          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">S</span><div class="grev-id"><span class="grev-name">serena berger</span><span class="grev-date">Mar 2026 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
+        <figure class="grev-card reveal" style="--d:0.15s">
+          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">B</span><div class="grev-id"><span class="grev-name">Bridget Mcmullen</span><span class="grev-date">Aug 2025 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
           <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote>Crystal did a marvelous job on my facial. She made me feel welcome. Salon was very clean</blockquote>
-        </figure>
-        <figure class="grev-card reveal grev-more" hidden style="--d:0.05s">
-          <div class="grev-cardtop"><span class="grev-av" aria-hidden="true">S</span><div class="grev-id"><span class="grev-name">susan milam</span><span class="grev-date">Mar 2024 &middot; Google</span></div><svg class="grev-gmini" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M23.49 12.27c0-.79-.07-1.54-.2-2.27H12v4.51h6.47a5.53 5.53 0 0 1-2.4 3.63v3h3.88c2.27-2.09 3.54-5.17 3.54-8.87z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.76-2.11-6.7-4.94H1.29v3.09A11.99 11.99 0 0 0 12 24z"/><path fill="#FBBC05" d="M5.3 14.31a7.2 7.2 0 0 1 0-4.62V6.6H1.29a12 12 0 0 0 0 10.8l4.01-3.09z"/><path fill="#EA4335" d="M12 4.77c1.76 0 3.35.61 4.6 1.8l3.43-3.43A11.99 11.99 0 0 0 12 0 11.99 11.99 0 0 0 1.29 6.6l4.01 3.09C6.24 6.88 8.88 4.77 12 4.77z"/></svg></div>
-          <span class="grev-stars sm" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <blockquote>I have had a hydro facial and 2 micro needling treatments with Caitlin. She is the best. She is friendly and knowledgeable. Thanks, Caitlin for taking care of my needs.</blockquote>
+          <blockquote>My experience at cedar creek cosmos was amazing , great relaxing environment and very friendly welcoming staff . Facial I got was amazing and my lips always look the best !!!!</blockquote>
         </figure>
       </div>
-      <div class="grev-actions reveal">
-        <button class="btn btn-ghost" id="grevMore" type="button" aria-expanded="false" aria-controls="grevWall">Show more reviews</button>
-      </div>
-      <p class="grev-disc reveal">Verbatim excerpts from verified Google reviews of Cedar Creek Cosmo (rated 5.0 across 34 reviews). Individual experiences; results vary and are not guaranteed.</p>
+      <p class="grev-disc reveal">Verbatim excerpts from verified Google reviews of Cedar Creek Cosmo (rated 5.0 across 36 reviews). Individual experiences; results vary and are not guaranteed.</p>
     </section>
 
-    <!-- ============ 7 · THE STUDIO: can I trust them? (real photo, names, address, phone) ============ -->
-    <section class="sec trust" id="studio">
-      <div class="wrap">
-        <div class="sec-head">
-          <!-- SWAP: studio kicker + heading + lede -->
-          <p class="kicker reveal">The studio</p>
-          <h2 class="reveal" style="--d:.06s">A real place, <span class="nw">on Cedar Creek Lake.</span></h2>
-          <p class="lead reveal" style="--d:.12s">A luxury spa with a hometown feel, in Gun Barrel City since 2020. Real people and a real front desk.</p>
-        </div>
-        <!-- SWAP: team photo + caption (the studio's own photograph from cedarcreekcosmo.com/about-1; names as captioned there) -->
-        <figure class="team-fig reveal">
-          <div class="media"><img src="cedar-creek-assets/team-studio.webp" width="1400" height="1141" alt="The five-person Cedar Creek Cosmo team in black studio scrubs, standing together at the wood-slat front desk" loading="lazy" decoding="async"></div>
-          <figcaption>The Cedar Creek Cosmo team, at the front desk: Christyl, RN &middot; Kelsey, RN &middot; Brennan, manager &middot; Stephanie, RN &middot; Kensey, front desk</figcaption>
-        </figure>
-        <div class="practice-grid">
-          <!-- SWAP: founders photo + caption (the studio's own photograph, not AI) -->
-          <figure class="practice-fig reveal">
-            <div class="media"><img src="cedar-creek-assets/founders-front-desk.webp" width="960" height="1228" alt="Lance and Brennan Popham standing beside the C3 monogram on the studio's front desk" loading="lazy" decoding="async"></div>
-            <figcaption>Lance and Brennan Popham, founders, at the studio</figcaption>
-          </figure>
-          <!-- SWAP: 2 trust rows + address card -->
-          <div>
-            <div class="principle reveal">
-              <span class="pm" aria-hidden="true">01</span>
-              <div><h3>Licensed nurses, every visit</h3><p>Christyl, Kelsey, and Stephanie are registered nurses. Your care is delivered by licensed providers, in the studio, every time.</p></div>
-            </div>
-            <div class="principle reveal" style="--d:.06s">
-              <span class="pm" aria-hidden="true">02</span>
-              <div><h3>Founded by locals</h3><p>Lance and Brennan Popham, raising their family here, turned Cedar Creek Clinic into the lake's own destination for wellness and beauty. Call <a class="tlink" href="tel:+19038025130">(903) 802-5130</a> and you reach the studio itself.</p></div>
-            </div>
-            <div class="lake-card reveal" style="--d:.24s">
-              <b><a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX 75156</a></b>
-              <span>Monday to Friday 8:30 to 6:00 &middot; Saturday 9:00 to 5:00 &middot; Closed Sunday &middot; (903) 802-5130</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 8 · CTA: what do I do next? (one register: the complimentary consult) ============ -->
+    <!-- ============ 11 · CLOSING CTA + FORM: ready for a refreshed look? ============ -->
     <section class="cta sec" id="reserve">
       <!-- plain ground: the ink-wash glow behind the offer copy was removed (Jennifer 2026-08-15) -->
       <div class="wrap cta-in">
         <div class="offer">
           <div class="offer-copy reveal">
-            <!-- SWAP: CTA kicker, heading, intro, consult line -->
+            <!-- SWAP: CTA kicker, heading (Tutera lineage), intro, location line -->
             <p class="kicker">Book</p>
-            <h2>Ready to soften <span class="nw">a few lines?</span></h2>
-            <p>Book a complimentary consultation. No pressure, no obligation. A provider who looks, listens, and tells you straight what fits, right here on Cedar Creek Lake.</p>
+            <h2>Ready for a <span class="nw">refreshed look?</span></h2>
+            <p>Book a complimentary consult. No pressure. No obligation.</p>
             <div class="price-line">
-              <b>Complimentary</b>
-              <span>In person or virtual</span>
+              <b>Gun Barrel City</b>
+              <span>on Cedar Creek Lake</span>
             </div>
           </div>
-          <!-- SWAP: consultation form fields + labels. Ships UNWIRED (action="#"); the team wires it to GHL before ads go live. -->
-          <form id="lead" action="#" novalidate class="reveal" style="--d:.1s">
-            <div class="frow">
+          <div class="form-col reveal" style="--d:.1s">
+            <!-- SWAP: consultation form (locked contract, same as Tutera: full name, phone, email, consult type). Ships UNWIRED (action="#"); the GHL relay (server-side name split into firstName/lastName, upsert, GET-verify, greeting_name fallback, dedupe-preference check for this subaccount) lives in the Tutera doc, Calls-2, and applies identically here. -->
+            <form id="lead" action="#" novalidate>
               <div class="field">
-                <label for="fn">First name</label>
-                <input id="fn" name="first_name" type="text" autocomplete="given-name" placeholder="First name" required>
+                <label for="name">Full name</label>
+                <input id="name" name="full_name" type="text" autocomplete="name" placeholder="Full name" required>
+              </div>
+              <div class="frow">
+                <div class="field">
+                  <label for="ph">Phone</label>
+                  <input id="ph" name="phone" type="tel" autocomplete="tel" placeholder="(000) 000-0000" required>
+                </div>
+                <div class="field">
+                  <label for="em">Email</label>
+                  <input id="em" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+                </div>
               </div>
               <div class="field">
-                <label for="ln">Last name</label>
-                <input id="ln" name="last_name" type="text" autocomplete="family-name" placeholder="Last name" required>
-              </div>
-            </div>
-            <div class="frow">
-              <div class="field">
-                <label for="ph">Phone</label>
-                <input id="ph" name="phone" type="tel" autocomplete="tel" placeholder="(000) 000-0000" required>
-              </div>
-              <div class="field">
-                <label for="em">Email</label>
-                <input id="em" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-              </div>
-            </div>
-            <div class="frow">
-              <div class="field">
-                <label for="interest">Interest (optional)</label>
-                <select id="interest" name="interest">
-                  <option value="" selected disabled>Choose one</option>
-                  <option>Wrinkle-relaxing injections</option><option>Dermal filler</option><option>Not sure yet</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="ct">Consult preference</label>
+                <label for="ct">Consult type</label>
                 <select id="ct" name="consult_type" required>
                   <option value="" selected disabled>Select one</option>
-                  <option>In person, at the studio</option><option>Virtual, by phone or video</option>
+                  <option>In-person</option><option>Virtual</option>
                 </select>
               </div>
-            </div>
-            <input type="hidden" id="gclid" name="gclid">
-            <button class="btn" type="submit" style="width:100%">Book my consultation
-              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
-            <p class="form-note">Complimentary consult, no obligation, and any costs are gone over first. Contact details only here, please do not share medical information in this form. By submitting, you agree to be contacted to schedule. This page is advertising, not medical advice.</p>
-          </form>
-          <!-- SWAP: submit note. PLACEHOLDER: the form is not wired; this note only stands in for the GHL response until wiring. -->
-          <p id="done" role="status" hidden>Received. The studio will call to set your complimentary consultation. Nothing is booked or charged until you say so.</p>
+              <input type="hidden" id="gclid" name="gclid">
+              <button class="btn" type="submit" style="width:100%">Book my consultation
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+              <p class="form-note">Contact details only, please don't share medical information here. A member of our team will confirm your consultation and answer any questions.</p>
+            </form>
+            <!-- SWAP: submit note. PLACEHOLDER: the form is not wired; this note only stands in for the GHL response until wiring. -->
+            <p id="done" role="status" hidden>Received. A member of our team will confirm your consultation and answer any questions. Nothing is booked or charged until you say so.</p>
+            <p class="form-alt">Prefer to talk? <a href="tel:+19038025130">(903) 802-5130</a> <span class="sep" aria-hidden="true">&middot;</span> <a class="maplink" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">426 S. Gun Barrel City Lane, Suite B, Gun Barrel City, TX</a></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ 5a · FAQ: what happens when it fails? ============ -->
+    <!-- ============ 12 · FAQ: below the form (Jennifer 2026-08-15) ============ -->
     <section class="sec wrap faq-sec" id="faq">
       <div class="sec-head">
         <!-- SWAP: FAQ kicker + heading (section is centered) -->
@@ -1086,7 +1176,7 @@
             Cedar Creek Cosmo
           </a>
           <!-- SWAP: footer blurb -->
-          <p>A luxury wellness spa on Cedar Creek Lake: facial injections placed by licensed nurses, with weight loss, hormone therapy, and skin services under the same roof. Health from head to toe.</p>
+          <p>A luxury wellness spa on Cedar Creek Lake: dermal filler and facial injections placed by skilled, licensed injectors, with weight loss, hormone therapy, and skin services under the same roof. Health from head to toe.</p>
         </div>
         <div class="foot-col">
           <h4>Visit</h4>
@@ -1110,8 +1200,8 @@
       <div class="foot-bottom">
         <!-- SWAP: copyright + medical disclaimer + review source + imagery honesty note -->
         <p>&copy; <span id="year">2026</span> Cedar Creek Cosmo. All rights reserved. <span class="sep" aria-hidden="true">|</span> <a class="maplink" href="https://www.cedarcreekcosmo.com/general-4" target="_blank" rel="noopener noreferrer">Privacy Policy</a></p>
-        <p>This page is advertising, not medical advice. The information on it is for general educational purposes. Wrinkle-relaxing injections are prescription treatments, and all treatments are available only after a consultation and evaluation by a licensed provider, and only if appropriate for you. Individual results vary and are not guaranteed. This page does not create a patient-provider relationship. If you are experiencing a medical emergency, call 911.</p>
-        <p>Review excerpts are verbatim from verified Google reviews of Cedar Creek Cosmo, rated 5.0 across 34 reviews; individual experiences vary. Styled treatment and consultation imagery on this page uses AI modelled people, not our patients or staff; the team and founder photographs are the studio's own.</p>
+        <p>This page is advertising, not medical advice. The information on it is for general educational purposes. Aesthetic injectable treatments are available only after a consultation and evaluation by a licensed provider, and only if appropriate for you. Individual results vary and are not guaranteed. This page does not create a patient-provider relationship. If you are experiencing a medical emergency, call 911.</p>
+        <p>Review excerpts are verbatim from verified Google reviews of Cedar Creek Cosmo, rated 5.0 across 36 reviews; individual experiences vary. Styled treatment and consultation imagery on this page uses AI modelled people, not our patients or staff; the team and founder photographs are the studio's own.</p>
       </div>
     </div>
   </footer>
