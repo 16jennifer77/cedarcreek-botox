@@ -640,8 +640,23 @@
     @media (min-width:720px){.stats.stats3 ul{grid-template-columns:repeat(3,1fr)}}
     .stats3 b.word{font-size:clamp(1.9rem,3vw,2.6rem);line-height:1.15;padding-top:.35rem;text-shadow:none}
     .stats3 li{padding-inline:1rem}
-    /* area rows without the units column */
-    @media (min-width:860px){.area-row{grid-template-columns:3rem minmax(0,1fr)}}
+    /* area rows: small square study + number + copy (v18.4, Jennifer 2026-08-16: a few small AI images) */
+    .area-row{grid-template-columns:72px minmax(0,1fr);gap:.2rem 1.1rem;align-items:start}
+    .area-thumb{width:72px;aspect-ratio:1/1;border:1px solid var(--hair);grid-row:1/3}
+    .area-thumb::after{background:linear-gradient(164deg,var(--wash-soft),rgba(14,21,18,.22))}
+    .area-row .no{grid-column:2;padding-top:0}
+    .area-row>div{grid-column:2}
+    @media (min-width:860px){
+      .area-row{grid-template-columns:96px 3rem minmax(0,1fr);gap:.35rem 1.4rem;align-items:center}
+      .area-thumb{width:96px;grid-row:auto}
+      .area-row .no{grid-column:auto;padding-top:.3rem}
+      .area-row>div{grid-column:auto}
+    }
+    /* closing block: small locale still under the location line */
+    .cta-fig{margin:1.8rem 0 0;max-width:420px}
+    .cta .cta-fig .media{position:relative;inset:auto;aspect-ratio:16/9;border:1px solid var(--hair);z-index:auto}
+    .cta .cta-fig .media::after{content:"";background:linear-gradient(164deg,var(--wash-soft),rgba(14,21,18,.18))}
+    @media (max-width:919px){.cta-fig{max-width:100%}.cta-fig .media{aspect-ratio:2/1}}
     .map-side h2{margin-bottom:1.6rem}
     /* what to expect: label + line rows */
     .expect-list li{display:grid;grid-template-columns:22px 1fr;gap:.35rem 1.1rem;align-items:baseline}
@@ -701,9 +716,7 @@
     /* closing form column */
     .form-col{display:grid;gap:1.1rem}
     /* prefer-to-talk tiles under the form: phone + studio address, hairline tiles with a gold icon (Jennifer 2026-08-16) */
-    @media (min-width:920px){.offer .talk{grid-column:2}}
-    .offer .talk{margin-top:calc(1.1rem - clamp(2.6rem,5vw,4rem));display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair)}
-    @media (max-width:719px){.offer .talk{margin-top:calc(1.1rem - 2.2rem)}}
+    .offer .talk{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair)}
     @media (min-width:520px){.offer .talk{grid-template-columns:auto 1fr}}
     .talk-tile{display:flex;align-items:center;gap:.9rem;padding:1rem 1.15rem;background:var(--noir-2);text-decoration:none;color:var(--ink);transition:background .25s var(--ease)}
     .talk-tile:hover{background:var(--panel)}
@@ -867,18 +880,22 @@
         <!-- SWAP: 4 area rows -->
         <div class="area-list">
           <div class="area-row reveal">
+            <span class="area-thumb media" aria-hidden="true"><img src="cedar-creek-assets/thumb-cheeks.webp" width="320" height="320" alt="" loading="lazy" decoding="async"></span>
             <span class="no" aria-hidden="true">01</span>
             <div><h3>Cheeks</h3><p class="desc">Helps restore subtle volume where time has softened it.</p></div>
           </div>
           <div class="area-row reveal" style="--d:.06s">
+            <span class="area-thumb media" aria-hidden="true"><img src="cedar-creek-assets/thumb-lips.webp" width="320" height="320" alt="" loading="lazy" decoding="async"></span>
             <span class="no" aria-hidden="true">02</span>
             <div><h3>Lips</h3><p class="desc">A little at a time, shaped to your face.</p></div>
           </div>
           <div class="area-row reveal" style="--d:.12s">
+            <span class="area-thumb media" aria-hidden="true"><img src="cedar-creek-assets/thumb-smile.webp" width="320" height="320" alt="" loading="lazy" decoding="async"></span>
             <span class="no" aria-hidden="true">03</span>
             <div><h3>Smile lines</h3><p class="desc">Helps smooth the look of deeper folds.</p></div>
           </div>
           <div class="area-row reveal" style="--d:.18s">
+            <span class="area-thumb media" aria-hidden="true"><img src="cedar-creek-assets/thumb-consult.webp" width="320" height="320" alt="" loading="lazy" decoding="async"></span>
             <span class="no" aria-hidden="true">04</span>
             <div><h3>Not sure yet</h3><p class="desc">Your consult decides together, and nothing is booked blind.</p></div>
           </div>
@@ -1097,6 +1114,10 @@
               <b>Gun Barrel City</b>
               <span>on Cedar Creek Lake</span>
             </div>
+            <!-- SWAP: small locale still (AI-modelled lake study; locale imagery lives in the location block) -->
+            <figure class="cta-fig">
+              <div class="media"><img src="cedar-creek-assets/lake-cta.webp" width="1200" height="675" alt="Golden hour over Cedar Creek Lake, still water and a line of trees" loading="lazy" decoding="async"></div>
+            </figure>
           </div>
           <div class="form-col reveal" style="--d:.1s">
             <!-- SWAP: consultation form (locked contract, same as Tutera: full name, phone, email, consult type). Ships UNWIRED (action="#"); the GHL relay (server-side name split into firstName/lastName, upsert, GET-verify, greeting_name fallback, dedupe-preference check for this subaccount) lives in the Tutera doc, Calls-2, and applies identically here. -->
@@ -1130,17 +1151,17 @@
             </form>
             <!-- SWAP: submit note. PLACEHOLDER: the form is not wired; this note only stands in for the GHL response until wiring. -->
             <p id="done" role="status" hidden>Received. A member of our team will confirm your consultation and answer any questions. Nothing is booked or charged until you say so.</p>
-          </div>
-          <!-- SWAP: prefer-to-talk tiles under the form (phone + studio address; both link out) -->
-          <div class="talk reveal" aria-label="Other ways to reach the studio">
-            <a class="talk-tile" href="tel:+19038025130">
-              <span class="talk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.3a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-              <span class="talk-tx"><span class="talk-lb">Prefer to talk?</span><span class="talk-v">(903) 802-5130</span></span>
-            </a>
-            <a class="talk-tile" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">
-              <span class="talk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
-              <span class="talk-tx"><span class="talk-lb">The studio</span><span class="talk-v">426 S. Gun Barrel City Lane, Suite B, <span class="nw">Gun Barrel City, TX</span></span></span>
-            </a>
+            <!-- SWAP: prefer-to-talk tiles under the form (phone + studio address; both link out) -->
+            <div class="talk reveal" aria-label="Other ways to reach the studio">
+              <a class="talk-tile" href="tel:+19038025130">
+                <span class="talk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.5.56 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.3a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1L6.6 10.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+                <span class="talk-tx"><span class="talk-lb">Prefer to talk?</span><span class="talk-v">(903) 802-5130</span></span>
+              </a>
+              <a class="talk-tile" href="https://www.google.com/maps/place/?q=place_id:ChIJP_MInecjSYYR_1JDZIE0byI" target="_blank" rel="noopener noreferrer">
+                <span class="talk-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                <span class="talk-tx"><span class="talk-lb">The studio</span><span class="talk-v">426 S. Gun Barrel City Lane, Suite B, <span class="nw">Gun Barrel City, TX</span></span></span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
