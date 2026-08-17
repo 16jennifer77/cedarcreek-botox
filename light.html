@@ -717,6 +717,13 @@
     .lit .btn-ghost{background:transparent;color:var(--onlit);border-color:var(--onlit-hair)}
     .lit .btn-ghost:hover{color:var(--vio-deep);border-color:var(--vio-deep)}
     .lit .fine{color:var(--onlit-3);font-size:.82rem;line-height:1.6;max-width:52ch}
+    /* Offer block, numbered consult moments (Jennifer 2026-08-17): replaces the plain rule list so the section reads differently from #expect */
+    .consult-steps{list-style:none;margin-top:1.7rem;border-top:1px solid var(--onlit-hair)}
+    .consult-steps li{display:grid;grid-template-columns:2.6rem 1fr;gap:.2rem 1rem;align-items:start;padding-block:1.15rem;border-bottom:1px solid var(--onlit-hair-soft)}
+    .consult-steps li i{font-style:normal;font-family:var(--disp);font-weight:500;font-size:1.35rem;line-height:1.15;color:var(--vio-deep);letter-spacing:.02em}
+    .consult-steps li b{display:block;font-family:var(--disp);font-weight:500;font-size:1.08rem;line-height:1.3;color:var(--onlit);letter-spacing:.01em;margin-bottom:.25rem}
+    .consult-steps li span{display:block;font-size:.93rem;line-height:1.6;color:var(--onlit-2);max-width:46ch}
+    .offer-body .promise{margin-top:1.4rem;font-size:1.12rem}
     /* trust band: five pairs */
     .tband{border-block:1px solid var(--hair);background:var(--noir-2)}
     .tband ul{list-style:none;display:grid;grid-template-columns:1fr}
@@ -966,7 +973,7 @@
       </div>
     </section>
 
-    <!-- ============ 7 · OFFER BLOCK: a complimentary first consultation (lit ground, real team photo) ============ -->
+    <!-- ============ 7 · OFFER BLOCK: your first visit, a complimentary consultation (lit ground, real team photo) ============ -->
     <section class="sec lit offer-sec" id="offer">
       <div class="wrap practice-grid">
         <!-- SWAP: team photo + caption (the studio's own photograph from cedarcreekcosmo.com/about-1; names as captioned there) -->
@@ -975,17 +982,16 @@
           <figcaption>The Cedar Creek Cosmo team: Christyl, RN &middot; Kelsey, RN &middot; Brennan, manager &middot; Stephanie, RN &middot; Kensey, front desk</figcaption>
         </figure>
         <div class="offer-body">
-          <!-- SWAP: offer kicker, heading, lede, 4 bullets, promise line, CTAs, disclaimer -->
-          <p class="kicker reveal">The offer</p>
-          <h2 class="reveal" style="--d:.06s">A complimentary <span class="nw">first consultation.</span></h2>
-          <p class="lead reveal" style="--d:.12s">An honest look at what will help, what won't, and when to wait.</p>
-          <ul class="rlist reveal" style="--d:.18s">
-            <li>A whole-face look and honest answers</li>
-            <li>A conservative plan, often one area first</li>
-            <li>Skilled, licensed injectors</li>
-            <li>Costs explained clearly up front</li>
-          </ul>
-          <p class="promise reveal" style="--d:.22s">No pressure. No obligation. No surprises.</p>
+          <!-- SWAP: consult kicker, heading, lede, 3 numbered moments, promise line, CTAs, disclaimer (Jennifer 2026-08-17: rewritten so it no longer mirrors the What-to-expect list above) -->
+          <p class="kicker reveal">Your first visit</p>
+          <h2 class="reveal" style="--d:.06s">Come with questions. <span class="nw">Leave with a plan.</span></h2>
+          <p class="lead reveal" style="--d:.12s">Your first consultation is complimentary. It is a conversation, not a commitment, and nothing has to happen the same day.</p>
+          <ol class="consult-steps reveal" style="--d:.18s">
+            <li><i>01</i><div><b>Ask anything</b><span>Bring the questions you have been sitting on, and any photos or ideas that got you thinking. None of them are silly.</span></div></li>
+            <li><i>02</i><div><b>What filler can and can't do</b><span>Your injector looks at your whole face with you and explains what would help, what wouldn't, and when waiting is the better answer.</span></div></li>
+            <li><i>03</i><div><b>See the plan and the costs</b><span>What is suggested, in what order, and what it costs, put in front of you before you decide anything.</span></div></li>
+          </ol>
+          <p class="promise reveal" style="--d:.22s">Then take it home and think it over.</p>
           <div class="hero-cta reveal" style="--d:.26s">
             <a class="btn" href="#lead">Book your consultation
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
