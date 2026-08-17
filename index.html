@@ -384,7 +384,7 @@
     .cta-in{position:relative;z-index:3}
     .offer{display:grid;gap:clamp(2.6rem,5vw,4rem);align-items:center}
     .offer-copy h2{margin-bottom:1rem;max-width:16ch}
-    .offer-copy>p{color:var(--ink-2);max-width:46ch;margin-bottom:1.8rem}
+    .offer-copy>p,.offer-head>p{color:var(--ink-2);max-width:46ch;margin-bottom:1.8rem}
     .price-line{display:flex;align-items:baseline;gap:.7rem;border-top:1px solid var(--hair);padding-top:1.4rem}
     .price-line b{font-family:var(--disp);font-weight:500;font-size:2.1rem;color:var(--white)}
     .price-line span{color:var(--faint);font-size:.78rem;text-transform:uppercase;letter-spacing:.12em;font-weight:500}
@@ -673,6 +673,14 @@
     }
     /* closing block: small locale still under the location line */
     .cta-fig{margin:1.8rem 0 0;max-width:420px}
+    /* phones: copy, then form + tiles, then the location line + lake still (Jennifer 2026-08-16) */
+    @media (max-width:919px){
+      .offer-copy{display:contents}
+      .offer-head{order:1}
+      .form-col{order:2}
+      .offer-loc{order:3}
+      .offer-loc .price-line{border-top:0;padding-top:0}
+    }
     .cta .cta-fig .media{position:relative;inset:auto;aspect-ratio:16/9;border:1px solid var(--hair);z-index:auto}
     .cta .cta-fig .media::after{content:"";background:linear-gradient(164deg,var(--wash-soft),rgba(14,21,18,.18))}
     @media (max-width:919px){.cta-fig{max-width:100%}.cta-fig .media{aspect-ratio:2/1}}
@@ -1068,11 +1076,14 @@
       <!-- plain ground: the ink-wash glow behind the offer copy was removed (Jennifer 2026-08-15) -->
       <div class="wrap cta-in">
         <div class="offer">
-          <div class="offer-copy reveal">
-            <!-- SWAP: CTA kicker, heading (Tutera lineage), intro, location line -->
+          <div class="offer-copy">
+            <!-- SWAP: CTA kicker, heading (Tutera lineage), intro, location line. On phones the copy block sits above the form and the location block (line + lake still) drops below it. -->
+            <div class="offer-head reveal">
             <p class="kicker">Book</p>
             <h2>Ready for a <span class="nw">refreshed look?</span></h2>
             <p>Book a complimentary consult. No pressure. No obligation.</p>
+            </div>
+            <div class="offer-loc reveal">
             <div class="price-line">
               <b>Gun Barrel City</b>
               <span>on Cedar Creek Lake</span>
@@ -1081,6 +1092,7 @@
             <figure class="cta-fig">
               <div class="media"><img src="cedar-creek-assets/lake-cta.webp" width="1200" height="675" alt="Golden hour over Cedar Creek Lake, still water and a line of trees" loading="lazy" decoding="async"></div>
             </figure>
+            </div>
           </div>
           <div class="form-col">
             <!-- SWAP: consultation form (first name, last name, phone, email, consult type; Jennifer 2026-08-16 split the name into two fields). Ships UNWIRED (action="#"); the GHL relay (upsert, GET-verify, greeting_name fallback, dedupe-preference check for this subaccount) lives in the Tutera doc, Calls-2, and applies identically here. -->
