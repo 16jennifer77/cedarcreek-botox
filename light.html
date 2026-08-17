@@ -231,9 +231,12 @@
     .hero .media{position:absolute;inset:0}
     .hero .media::after{content:none}
     .hero-scrim{position:absolute;inset:0;z-index:2;pointer-events:none;
-      background:linear-gradient(to bottom,rgba(250,247,241,.6),transparent 16%),
-      linear-gradient(to top,rgba(250,247,241,.82) 4%,rgba(250,247,241,.4) 40%,transparent 72%),
-      linear-gradient(to right,rgba(250,247,241,.9),rgba(250,247,241,.62) 30%,transparent 56%)}
+      /* light variant: one flat light-green tint over the whole still, no gradient wash (Jennifer 2026-08-16); the still itself is lifted so the dark copy reads */
+      background:rgba(186,206,186,.5)}
+    .hero .media>img{filter:grayscale(.15) sepia(.06) brightness(1.36) contrast(.9)}
+    .hero .kicker,.hero .vio{color:#67511f}
+    .hero .kicker::before{background:#67511f}
+    .hero-sub{color:var(--ink)}
     .hero-in{position:relative;z-index:3;padding-top:calc(76px + clamp(2.5rem,6vw,4.5rem));padding-bottom:clamp(3rem,6.5vw,5.25rem)}
     .hero h1{font-size:clamp(2.9rem,6.4vw,5.3rem);line-height:1.06;margin-bottom:1.5rem;max-width:13ch}
     .hero-sub{font-size:clamp(1.04rem,1.5vw,1.18rem);line-height:1.7;color:var(--ink-2);max-width:52ch;margin-bottom:2.2rem}
@@ -619,7 +622,7 @@
     /* v17: phones. A darker tint sits over the hero still so the copy stays legible (kept from the film era) */
     @media (max-width:959px){
       .hero .media .bandvid{object-position:50% 40%}
-      .hero-scrim::after{content:"";position:absolute;inset:0;background:rgba(250,247,241,.22)}
+      .hero-scrim::after{content:"";position:absolute;inset:0;background:rgba(186,206,186,.14)}
     }
     /* phones: no Call / Book bar and no hamburger; the Book consult button sits beside the brand in the 76px header (Jennifer 2026-08-16) */
     .menu-btn{display:none}
